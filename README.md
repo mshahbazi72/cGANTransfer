@@ -42,7 +42,7 @@ The base directory will contain the following sub-directories:
 Before training, you should create thesub-directories <b>"data"</b> and <b>"weights"</b>. Then place the data and pretraining weights inside them accordingly. the sub-directories <b>"logs"</b> and <b>"samples"</b> will be created automatically during the training.
 
 ### 2.2. Data<a name="Data"></a>
-The multi-class data should be organized as different sub-directories for different classes under the main folder. The main folder should be called "ImageNet". The "ImageNet" folder should be placed in base_dir/data/
+The multi-class data should be organized as different sub-directories for different classes under the main folder. The main folder should be called "ImageNet". The "ImageNet" folder should be placed in "base_dir/data/"
 
 base_dir -> data -> ImageNet -> [class_1, ..., class_n]
 
