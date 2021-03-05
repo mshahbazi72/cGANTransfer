@@ -13,7 +13,7 @@ The code will be available here soon.
 
 ## Overview
 <ol>
-  <li>[Dependencies](#Dependencies)</li>
+  <li>[Dependencies](##Dependencies)</li>
   <li><a href="#prep">Prepration</a>
     <ol>
       <li><a href="#dir">Directories</a></li>
