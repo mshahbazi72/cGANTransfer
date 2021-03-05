@@ -45,6 +45,19 @@ Before training, you should create thesub-directories <b>"data"</b> and <b>"weig
 For any questions, suggestions, or issues with the code, please contact Mohamad at <a>mshahbazi@vision.ee.ethz.ch</a>.
 
 ## 6. How to cite<a name="How-to-cite"></a>
+If you find this project helpful, please consider citing us as follows:
+```bash
+@inproceedings{shahbazi2021cGANTransfer,
+      title = {Efficient Conditional GAN Transfer with Knowledge Propagation across Classes,
+      author    = {Shahbazi, Mohamad and
+                   Huang, Zhiwu and
+                   Paudel, ‪Danda Pani and
+                   Chhatkuli, Ajad and
+                   Van Goll, Luc},
+      year = {2021},
+      booktitle = {2021 {IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2021}
+}
+```
 
 
 
