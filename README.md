@@ -14,19 +14,15 @@ The code will be available here soon.
 </ol>
 
 <div id="dep">
-## 1. Description
 </div>
 
 <div id="prep">
-## 1. Description
 </div>
 
 <div id="train">
-## 1. Description
 </div>
 
 <div id="res">
-## 1. Description
 </div>
 
 
