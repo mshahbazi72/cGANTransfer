@@ -45,7 +45,7 @@ The code will be available here soon.
 
 <div id="cite">
   '''
-  @inproceedings{shahbazi2020cGANTransfer,
+  >@inproceedings{shahbazi2020cGANTransfer,
       title = {Efficient Conditional GAN Transfer with Knowledge Propagation across Classes},
       author    = {Shahbazi, Mohamad and
                    Huang, Zhiwu and
