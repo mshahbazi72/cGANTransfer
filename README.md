@@ -61,6 +61,29 @@ For BigGAN on ImageNet, you can use the [pretrained weights](https://github.com/
 If you want to use other datasets (e.g. Cifar10/100) as the pretraining dataset, you can first train the [BigGAN](https://github.com/ajbrock/BigGAN-PyTorch) on the desired dataset, and then, use the pretrained weights for cGANTransfer.
 
 ## 3. Training<a name="Training"></a>
+To launch the training on your target data:
+
+For ImageNet experiments:
+```bash
+bash train_ImageNet.sh
+```
+
+For Cifar experiments:
+```bash
+bash train_cifar.sh
+```
+
+Some of the configuraions in "train_ImageNet.sh" / "train_cifar.sh" needs to be set according to your experiments. Some of the important parameters are:
+<ul>
+  <li><b>"--base_dir"</b>: The base directory containing your data, weights, logs, and generated samples (can be different from the code directory).</li>
+  <li><b>"--experiment_name"</b>: The name of the experiment you are going to run (will be generated automatically if nothing is passed)</li>
+  <li><b>"--batch_size"</b>: The batch size!</li>
+  <li><b>"--stage"</b>: The stage of the training ("BN": only training the BN parameter. "FT": fine-tuning everythin after the stage "BN")</li>
+  <li><b>"--n_class"</b>: The number of target classes</li>
+  <li><b>"--n_pretrain_class"</b>: The number of pretrained classes</li>
+  <li><b>"--resume"</b>: If used, weights are loaded from the last checkpoint. Otherwise, pretrained weights are loaded</li>
+</ul> 
+Make sure to understand the configuraion used in the scripts and their default values, by reading their descriptions in "utils.py"
 
 ## 4. Evaluation<a name="Evaluation"></a>
 ### 4.1. Evaluation Metrics<a name="Metrics"></a>
@@ -88,7 +111,7 @@ For Cifar experiments:
 ```bash
 bash sample_cifar.sh
 ```
-Make sure to adjust the confiduration in sample_ImageNet.sh / sample_cifar.sh according to your experiments.
+Make sure to adjust the configuration in sample_ImageNet.sh / sample_cifar.sh according to your experiments.
 
 ## 5. Results<a name="Results"></a>
 
