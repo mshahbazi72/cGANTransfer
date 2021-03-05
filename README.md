@@ -6,15 +6,13 @@ Generative adversarial networks (GANs) have shown impressive results in both unc
 The code will be available here soon.
 
 ## Overview
-
-
 <ol>
   <li><a href="#dep">Dependencies</a></li>
   <li><a href="#prep">Prepration</a>
     <ol>
-      <li>Directories</li>
-      <li>Data</li>
-      <li>Weights</li>
+      <li><a href="#dir">Directories</a></li>
+      <li><a href="#data">Data</a></li>
+      <li><a href="#weight">Weights</a></li>
     </ol>
   </li>
   <li><a href="#train">Training</a></li>
