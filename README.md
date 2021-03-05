@@ -7,25 +7,25 @@ The code will be available here soon.
 
 ## Overview
 <ol>
-<li><a href=#dep>Dependencies</a></li>
-<li><a href=#prep>Preprations</a></li>
-<li><a href=#train>Training</a></li>
-<li><a href=#res>Results</a></li>
+<li><a href="#dep">Dependencies</a></li>
+<li><a href="#prep">Preprations</a></li>
+<li><a href="#train">Training</a></li>
+<li><a href="#res">Results</a></li>
 </ol>
 
-<div name="dep">
+<div id="dep">
 ## 1. Description
 </div>
 
-<div name="prep">
+<div id="prep">
 ## 1. Description
 </div>
 
-<div name="train">
+<div id="train">
 ## 1. Description
 </div>
 
-<div name="res">
+<div id="res">
 ## 1. Description
 </div>
 
