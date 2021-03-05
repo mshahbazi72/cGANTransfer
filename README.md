@@ -13,7 +13,7 @@ The code will be available here soon.
 
 ## Overview
 <ol>
-  <li>[Dependencies](#Dependencies)</li>
+  <li><a href="#dep">Dependencies</a></li>
   <li><a href="#prep">Prepration</a>
     <ol>
       <li><a href="#dir">Directories</a></li>
@@ -26,12 +26,11 @@ The code will be available here soon.
   <li><a href="#contact">Contact</a></li>
   <li><a href="#cite">How to cite</a></li>
 </ol>
-##Dependencies
 
-[Dependencies]: ## How to Cite
+
 
 <div id="dep">
-  
+## Dependencies
 </div>
 
 <div id="prep">
