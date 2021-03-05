@@ -45,7 +45,7 @@ The code will be available here soon.
 </div>
 
 <div id="contact">
-  ## Contact
+## Contact
   <p>
     For any questions, suggestions, or issues with the code, please contact Mohamad at <a>mshahbazi@vision.ee.ethz.ch</a>.
   <p>
