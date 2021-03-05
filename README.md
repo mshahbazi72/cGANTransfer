@@ -25,7 +25,6 @@ The code will be available here soon.
   <li><a href="#res">Results</a></li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="#cite">How to cite</a></li>
-
 </ol>
 
 <div id="dep">
@@ -45,6 +44,16 @@ The code will be available here soon.
 </div>
 
 <div id="cite">
+  @inproceedings{shahbazi2020cGANTransfer,
+      title = {Efficient Conditional GAN Transfer with Knowledge Propagation across Classes},
+      author    = {Shahbazi, Mohamad and
+                   Huang, Zhiwu and
+                   Paudel, Danda Pani and
+                   Chhatkuli, Ajad and
+                   Van Gool, Luc},
+      year = {2021},
+      booktitle = {2021 {IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2021}
+}
 </div>
 
 
