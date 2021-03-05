@@ -30,6 +30,14 @@ The code will be available here soon.
 
 ## 2. Prepration
 ### 2.1. Directories
+The base directory will contain the following subdirectories:
+<ul>
+  <li>**data**: Contains the training data</li>
+  <li>**weights**: Contains the pretraining and training weights</li>
+  <li>**logs**: Contains the training logs</li>
+  <li>**samples**: Contains the saved images during evaluation</li>
+</ul>
+Before training, you should create the **data** and **weights** sub-directories, and place the data and pretraining weights accordingly.
 ### 2.2. Data
 ### 2.3. Weights
 
