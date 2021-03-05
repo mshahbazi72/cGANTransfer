@@ -21,7 +21,7 @@ The code will be available here soon.
     2. [Final Evaluation](#Final)
 6. [Results](#Results)
 7. [Contact](#Contact)
-8. [How to cite](#How-to-cite)
+8. [How to Cite](#How-to-Cite)
 
 ## 1. Installation & Dependencies<a name="Dependencies"></a>
 The code has been tested with Python 3.6 and Pytorch 1.0.1.
@@ -122,7 +122,7 @@ Make sure to adjust the configuration in sample_ImageNet.sh / sample_cifar.sh ac
 ## 6. Contact<a name="Contact"></a>
 For any questions, suggestions, or issues with the code, please contact Mohamad at <a>mshahbazi@vision.ee.ethz.ch</a>.
 
-## 7. How to cite<a name="How-to-cite"></a>
+## 7. How to Cite<a name="How-to-Cite"></a>
 If you find this project helpful, please consider citing us as follows:
 ```bash
 @inproceedings{shahbazi2021cGANTransfer,
