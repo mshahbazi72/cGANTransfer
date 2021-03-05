@@ -6,11 +6,28 @@ Generative adversarial networks (GANs) have shown impressive results in both unc
 The code will be available here soon.
 
 ## Overview
+ol {
+  counter-reset: item
+}
+li {
+  display: block
+}
+li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item
+}
+
 <ol>
-<li><a href="#dep">Dependencies</a></li>
-<li><a href="#prep">Preprations</a></li>
-<li><a href="#train">Training</a></li>
-<li><a href="#res">Results</a></li>
+  <li><a href="#dep">Dependencies</a></li>
+  <li><a href="#prep">Prepration</a>
+    <ol>
+      <li>Directories</li>
+      <li>Data</li>
+      <li>Weights</li>
+    </ol>
+  </li>
+  <li><a href="#train">Training</a></li>
+  <li><a href="#res">Results</a></li>
 </ol>
 
 <div id="dep">
