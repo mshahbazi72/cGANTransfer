@@ -37,6 +37,7 @@ The base directory will contain the following subdirectories:
   <li><b>logs</b>: Contains the training logs</li>
   <li><b>samples</b>: Contains the saved images during evaluation</li>
 </ul> 
+Before training, you should create the **data** and **weights** sub-directories, and place the data and pretraining weights accordingly.
 
 ### 2.2. Data
 ### 2.3. Weights
