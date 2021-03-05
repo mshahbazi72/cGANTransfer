@@ -42,7 +42,13 @@ The base directory will contain the following sub-directories:
 Before training, you should create thesub-directories <b>"data"</b> and <b>"weights"</b>. Then place the data and pretraining weights inside them accordingly. the sub-directories <b>"logs"</b> and <b>"samples"</b> will be created automatically during the training.
 
 ### 2.2. Data<a name="Data"></a>
-### 2.3. Pretrained Weights<a name="Weights"></a>
+The multi-class data should be organized as different sub-directories for different classes under the main folder. The main folder should be called "ImageNet". The "ImageNet" folder should be placed in base_dir/data/
+
+base_dir
+|_ data
+   |_ ImageNet
+      |_ class_1, ..., class_n
+            
 Before training, BigGAN's pretrained weights should be placed in the sub-directory "weights" of the base directory.
 
 For BigGAN on ImageNet, you can use the [pretrained weights](https://github.com/ajbrock/BigGAN-PyTorch#pretrained-models) provided by the BigGAN's authors. In this project, we have used the [main checkpoint](https://drive.google.com/file/d/1nAle7FCVFZdix2--ks0r5JBkFnKw8ctW/view).
