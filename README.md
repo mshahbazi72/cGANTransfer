@@ -60,7 +60,9 @@ For KMMD, the default implementation provided by [GAN Metrics](https://github.co
 
 KMMD calculation is deactivated by default to avoid memory errors. To activate the KMMD calculation, use the flag "--kmmd" in the script and reduce the number of generated samples used for evaluation using "----num_inception_images" (default=50000. We were able to avoid memory errors by setting it to 25000). 
 
-Note that reducing the number of generated samples might make the FID calculation a bit less accurate.
+Note 1: Reducing the number of generated samples might make the FID calculation a bit less accurate.
+
+Note 2: For very small datasets, FID score becomes unstable, since the inception statistics  of the real data cannot be estimated accurately.
 
 
 ## 5. Results<a name="Results"></a>
