@@ -10,15 +10,15 @@ Generative adversarial networks (GANs) have shown impressive results in both unc
 The code will be available here soon.
 
 ## Overview
-1.[Dependencies](#Dependencies)
-2.[Prepration](#Prepration)
-  1.[Directories](#Directories)
-  2.[Data](#Data)
-  3.[Weights](#Weights)
-3.[Training](#training)
-4.[Results](#Results)
-5.[Contact](#Contact)
-6.[How to cite](#How-to-cite)
+1. [Dependencies](#Dependencies)
+2. [Prepration](#Prepration)
+  1. [Directories](#Directories)
+  2. [Data](#Data)
+  3. [Weights](#Weights)
+3. [Training](#training)
+4. [Results](#Results)
+5. [Contact](#Contact)
+6. [How to cite](#How-to-cite)
 
 ## 1. Dependencies<a name="Dependencies"></a>
 
