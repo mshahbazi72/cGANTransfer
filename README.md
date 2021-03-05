@@ -26,7 +26,8 @@ The code will be available here soon.
   <li><a href="#contact">Contact</a></li>
   <li><a href="#cite">How to cite</a></li>
 </ol>
-  ## How to Cite
+
+## How to Cite
 
 <div id="dep">
   
