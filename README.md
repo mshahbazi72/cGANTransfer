@@ -13,18 +13,18 @@ The code will be available here soon.
 
 ## Overview
 <ol>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#1dependencies">Dependencies</a></li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#2prepration">Prepration</a>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#1-dependencies">Dependencies</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#2-prepration">Prepration</a>
     <ol>
-      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#21directories">Directories</a></li>
-      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#22data">Data</a></li>
-      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#23weights">Weights</a></li>
+      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#21-directories">Directories</a></li>
+      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#22-data">Data</a></li>
+      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#23-weights">Weights</a></li>
     </ol>
   </li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#3training">Training</a></li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#4results">Results</a></li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#5contact">Contact</a></li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#6how-to-cite">How to cite</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#3-training">Training</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#4-results">Results</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#5-contact">Contact</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#6-how-to-cite">How to cite</a></li>
 </ol>
 
 ## 1. Dependencies
