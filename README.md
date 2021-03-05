@@ -61,6 +61,8 @@ For BigGAN on ImageNet, you can use the [pretrained weights](https://github.com/
 If you want to use other datasets (e.g. Cifar10/100) as the pretraining dataset, you can first train the [BigGAN](https://github.com/ajbrock/BigGAN-PyTorch) on the desired dataset, and then, use the pretrained weights for cGANTransfer.
 
 ## 3. Training<a name="Training"></a>
+The training can be done in two stages. In the first stage ("BN"), only the batch normalization (BN) parameters of the target is learned from pretraining classes using knowledge transfer. An extra stage of fine-tuning ("FT") can also be performed afterwards, to fine-tune the whole network on the target data.
+
 To launch the training on your target data:
 
 For ImageNet experiments:
@@ -75,13 +77,15 @@ bash train_cifar.sh
 
 Some of the configuraions in "train_ImageNet.sh" / "train_cifar.sh" need to be set according to your experiments. Some of the important parameters are:
 <ul>
-  <li><b>"--base_dir"</b>: The base directory containing your data, weights, logs, and generated samples (can be different from the code directory).</li>
-  <li><b>"--experiment_name"</b>: The name of the experiment you are going to run (will be generated automatically if nothing is passed)</li>
-  <li><b>"--batch_size"</b>: The batch size!</li>
-  <li><b>"--stage"</b>: The stage of the training ("BN": only training the BN parameter. "FT": fine-tuning everythin after the stage "BN")</li>
-  <li><b>"--n_class"</b>: The number of target classes</li>
-  <li><b>"--n_pretrain_class"</b>: The number of pretrained classes</li>
-  <li><b>"--resume"</b>: If used, weights are loaded from the last checkpoint. Otherwise, pretrained weights are loaded</li>
+  <li><b>"base_dir"</b>: The base directory containing your data, weights, logs, and generated samples (can be different from the code directory).</li>
+  <li><b>"experiment_name"</b>: The name of the experiment you are going to run (will be generated automatically if nothing is passed)</li>
+  <li><b>"batch_size"</b>: The batch size!</li>
+  <li><b>"stage"</b>: The stage of the training ("BN": only training the BN parameter. "FT": fine-tuning everythin after the stage "BN")</li>
+  <li><b>"n_class"</b>: The number of target classes</li>
+  <li><b>"n_pretrain_class"</b>: The number of pretrained classes</li>
+  <li><b>"resume"</b>: If used, weights are loaded from the last checkpoint. Otherwise, pretrained weights are loaded</li>
+  <li><b>"res_l2_scale" & "comb_l1_scale"</b>: The scales of l2 and l1 regularizations (details in section 4.3 of the paper)</li>
+
 </ul> 
 Make sure to understand the configuraion used in the scripts and their default values, by reading their descriptions in "utils.py"
 
