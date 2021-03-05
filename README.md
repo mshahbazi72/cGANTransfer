@@ -1,6 +1,6 @@
 # Efficient Conditional GAN Transfer with Knowledge Propagation across Classes
 Authors: [Mohamad Shahbazi](https://people.ee.ethz.ch/~mshahbazi/), [Zhiwu Huang](https://zhiwu-huang.github.io/), [Danda P.Paudel](https://people.ee.ethz.ch/~paudeld/), [Ajad Chhatkuli](https://scholar.google.ch/citations?hl=en&user=3BHMHU4AAAAJ), and [Luc Van Gool](https://scholar.google.ch/citations?hl=en&user=TwMib_QAAAAJ)
-Paper: https://arxiv.org/pdf/2102.06696.pdf
+<br> Paper: https://arxiv.org/pdf/2102.06696.pdf
 
 ![alt text](images/concept.png)
 
