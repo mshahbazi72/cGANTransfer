@@ -27,34 +27,34 @@ The code will be available here soon.
   <li><a href="#cite">How to cite</a></li>
 </ol>
 
-
-## Dependencies
-
 <div id="dep">
 </div>
+## Dependencies
+
+
 
 <div id="prep">
 </div>
+## Prepration
 
 <div id="train">
-  
 </div>
+## Training
 
 <div id="res">
-  
 </div>
+## Results
 
 <div id="contact">
+</div>
 ## Contact
   <p>
     For any questions, suggestions, or issues with the code, please contact Mohamad at <a>mshahbazi@vision.ee.ethz.ch</a>.
   <p>
-</div>
 
 <div id="cite">
-
 </div>
-
+## How to cite:
 
 
 
