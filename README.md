@@ -48,7 +48,7 @@ For any questions, suggestions, or issues with the code, please contact Mohamad 
 If you find this project helpful, please consider citing us as follows:
 ```bash
 @inproceedings{shahbazi2021cGANTransfer,
-      title = {Efficient Conditional GAN Transfer with Knowledge Propagation across Classes,
+      title = {Efficient Conditional GAN Transfer with Knowledge Propagation across Classes},
       author    = {Shahbazi, Mohamad and
                    Huang, Zhiwu and
                    Paudel, ‪Danda Pani and
