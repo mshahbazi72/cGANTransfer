@@ -40,20 +40,21 @@ The code will be available here soon.
 </div>
 
 <div id="contact">
+  ## Contact
   For any questions, suggestions, or issues with the code, please contact Mohamad at <a>mshahbazi@vision.ee.ethz.ch</a>.
 </div>
 
 <div id="cite">
-  
-  >@inproceedings{shahbazi2020cGANTransfer,
-      title = {Efficient Conditional GAN Transfer with Knowledge Propagation across Classes},
-      author    = {Shahbazi, Mohamad and
-                   Huang, Zhiwu and
-                   Paudel, Danda Pani and
-                   Chhatkuli, Ajad and
-                   Van Gool, Luc},
-      year = {2021},
-      booktitle = {2021 {IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2021}
+  ## How to Cite
+  >@inproceedings{shahbazi2020cGANTransfer,<br>
+      >title = {Efficient Conditional GAN Transfer with Knowledge Propagation across Classes},<br>
+      >author    = {Shahbazi, Mohamad and<br>
+      >             Huang, Zhiwu and<br>
+      >             Paudel, Danda Pani and<br>
+      >             Chhatkuli, Ajad and<br>
+      >             Van Gool, Luc},<br>
+      >year = {2021},<br>
+      >booktitle = {2021 {IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2021}<br>
 }
 </div>
 
