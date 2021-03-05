@@ -10,26 +10,20 @@ Generative adversarial networks (GANs) have shown impressive results in both unc
 The code will be available here soon.
 
 ## Overview
-<ol>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#1-dependencies">Dependencies</a></li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#2-prepration">Prepration</a>
-    <ol>
-      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#21-directories">Directories</a></li>
-      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#22-data">Data</a></li>
-      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#23-weights">Weights</a></li>
-    </ol>
-  </li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#3-training">Training</a></li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#4-results">Results</a></li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#5-contact">Contact</a></li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#6-how-to-cite">How to cite</a></li>
-</ol>
+1.[Dependencies](#Dependencies)
+2.[Prepration](#Prepration)
+  1.[Directories](#Directories)
+  2.[Data](#Data)
+  3.[Weights](#Weights)
+3.[Training](#training)
+4.[Results](#Results)
+5.[Contact](#Contact)
+6.[How to cite](#How-to-cite)
 
-## 1. Dependencies
+## 1. Dependencies<a name="Dependencies"></a>
 
-
-## 2. Prepration
-### 2.1. Directories
+## 2. Prepration<a name="Prepration"></a>
+### 2.1. Directories<a name="Directories"></a>
 The base directory will contain the following sub-directories:
 <ul>
   <li><b>"data"</b>: Contains the training data</li>
@@ -37,20 +31,20 @@ The base directory will contain the following sub-directories:
   <li><b>"logs"</b>: Contains the training logs</li>
   <li><b>"samples"</b>: Contains the saved images during evaluation</li>
 </ul> 
-Before training, you should create the <b>"data"</b> and <b>"weights"</b> sub-directories, and place the data and pretraining weights accordingly. the sub-directories <b>"logs"</b> and <b>"samples"</b> will be created automatically during the training.
+Before training, you should create thesub-directories <b>"data"</b> and <b>"weights"</b>. Then place the data and pretraining weights inside them accordingly. the sub-directories <b>"logs"</b> and <b>"samples"</b> will be created automatically during the training.
 
-### 2.2. Data
-### 2.3. Weights
+### 2.2. Data<a name="Data"></a>
+### 2.3. Weights<a name="Weights"></a>
 
-## 3. Training
+## 3. Training<a name="Training"></a>
 
 
-## 4. Results
+## 4. Results<a name="Results"></a>
 
-## 5. Contact
+## 5. Contact<a name="Contact"></a>
 For any questions, suggestions, or issues with the code, please contact Mohamad at <a>mshahbazi@vision.ee.ethz.ch</a>.
 
-## 6. How to cite:
+## 6. How to cite<a name="How-to-cite"></a>
 
 
 
