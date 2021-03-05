@@ -36,7 +36,9 @@ Before training, you should create thesub-directories <b>"data"</b> and <b>"weig
 ### 2.2. Data<a name="Data"></a>
 ### 2.3. Pretrained Weights<a name="Weights"></a>
 Before training, BigGAN's pretrained weights should be placed in the sub-directory "weights".
+
 For BigGAN on ImageNet, you use the [pretrained weights](https://github.com/ajbrock/BigGAN-PyTorch#pretrained-models) provided by the BigGAN's authors.
+
 If you want to use other datasets (e.g. Cifar10/100) as the pretraining dataset, you can first train the [BigGAN](https://github.com/ajbrock/BigGAN-PyTorch) on the desired dataset, and then, use the pretrained weights for cGANTransfer.
 
 ## 3. Training<a name="Training"></a>
