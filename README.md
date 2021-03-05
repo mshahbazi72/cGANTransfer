@@ -77,7 +77,7 @@ KMMD calculation is deactivated by default to avoid memory errors. To activate t
 <b>Note 2</b>: For very small datasets, FID score becomes unstable, since the inception statistics  of the real data cannot be estimated accurately.
 
 ### 4.2. Final Evaluation<a name="Final"></a>
-In addition to the evaluation during the training, you can evaluate you final model using the following commands:
+In addition to the evaluation during the training, you can evaluate your final model using the following commands:
 
 For ImageNet experiments:
 ```bash
@@ -88,6 +88,7 @@ For Cifar experiments:
 ```bash
 bash sample_cifar.sh
 ```
+Make sure to adjust the confiduration in sample_ImageNet.sh / sample_cifar.sh according to your experiments.
 
 ## 5. Results<a name="Results"></a>
 
