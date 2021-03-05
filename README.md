@@ -13,7 +13,7 @@ The code will be available here soon.
 
 ## Overview
 <ol>
-  <li>[Dependencies](#dep)</li>
+  <li>[Dependencies](#Dependencies)</li>
   <li><a href="#prep">Prepration</a>
     <ol>
       <li><a href="#dir">Directories</a></li>
@@ -26,6 +26,7 @@ The code will be available here soon.
   <li><a href="#contact">Contact</a></li>
   <li><a href="#cite">How to cite</a></li>
 </ol>
+##Dependencies
 
 ## How to Cite
 
