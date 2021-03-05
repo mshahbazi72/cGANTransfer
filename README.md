@@ -11,21 +11,7 @@ Generative adversarial networks (GANs) have shown impressive results in both unc
 The code will be available here soon.
 </p>
 
-## Overview
-<ol>
-  <li><a href="#dep">Dependencies</a></li>
-  <li><a href="#prep">Prepration</a>
-    <ol>
-      <li><a href="#dir">Directories</a></li>
-      <li><a href="#data">Data</a></li>
-      <li><a href="#weight">Weights</a></li>
-    </ol>
-  </li>
-  <li><a href="#train">Training</a></li>
-  <li><a href="#res">Results</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#cite">How to cite</a></li>
-</ol>
+
 
 <div id="dep">
 </div>
