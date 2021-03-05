@@ -84,7 +84,7 @@ Some of the configuraions in "train_ImageNet.sh" / "train_cifar.sh" need to be s
   <li><b>"n_class"</b>: The number of target classes</li>
   <li><b>"n_pretrain_class"</b>: The number of pretrained classes</li>
   <li><b>"resume"</b>: If used, weights are loaded from the last checkpoint. Otherwise, pretrained weights are loaded</li>
-  <li><b>"res_l2_scale" & "comb_l1_scale"</b>: The scales of l2 and l1 regularizations (details in section 4.3 of the paper)</li>
+  <li><b>"res_l2_scale"</b> & <b>"comb_l1_scale"</b>: The degrees of l2 and l1 regularization (details in section 4.3 of the paper)</li>
 
 </ul> 
 Make sure to understand the configuraion used in the scripts and their default values, by reading their descriptions in "utils.py"
