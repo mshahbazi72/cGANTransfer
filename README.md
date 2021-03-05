@@ -26,21 +26,21 @@ The code will be available here soon.
   <li><a href="#contact">Contact</a></li>
   <li><a href="#cite">How to cite</a></li>
 </ol>
+  ## How to Cite
 
 <div id="dep">
-  sfsaf
+  
 </div>
 
 <div id="prep">
-  adfsdf
 </div>
 
 <div id="train">
-  asfsaf
+  
 </div>
 
 <div id="res">
-  asfsf
+  
 </div>
 
 <div id="contact">
@@ -51,7 +51,6 @@ The code will be available here soon.
 </div>
 
 <div id="cite">
-  ## How to Cite
 
 </div>
 
