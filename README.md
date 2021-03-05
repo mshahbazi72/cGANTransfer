@@ -8,8 +8,11 @@ The code will be available here soon.
 ## Overview
 1. [ Dependencies ](#dep)
 2. [ Preprations ](#prep)
-3. [ Training ](#train)
-4. [ Results ](#res)
+    2.1. [Directories](#dir)
+    2.2. [Data](#data)
+    2.3. [Pretrained Weights](#weight)
+4. [ Training ](#train)
+5. [ Results ](#res)
 
 <a name="desc"></a>
 ## 1. Description
