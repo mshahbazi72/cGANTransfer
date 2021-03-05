@@ -6,16 +6,7 @@ Generative adversarial networks (GANs) have shown impressive results in both unc
 The code will be available here soon.
 
 ## Overview
-ol {
-  counter-reset: item
-}
-li {
-  display: block
-}
-li:before {
-  content: counters(item, ".") " ";
-  counter-increment: item
-}
+
 
 <ol>
   <li><a href="#dep">Dependencies</a></li>
