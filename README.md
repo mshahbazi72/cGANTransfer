@@ -22,6 +22,9 @@ The code will be available here soon.
   </li>
   <li><a href="#train">Training</a></li>
   <li><a href="#res">Results</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#cite">How to cite</a></li>
+
 </ol>
 
 <div id="dep">
@@ -34,6 +37,12 @@ The code will be available here soon.
 </div>
 
 <div id="res">
+</div>
+
+<div id="contact">
+</div>
+
+<div id="cite">
 </div>
 
 
