@@ -17,9 +17,11 @@ The code will be available here soon.
     3. [Pretrained Weights](#Weights)
 3. [Training](#Training)
 4. [Evaluation](#Evaluation)
-5. [Results](#Results)
-6. [Contact](#Contact)
-7. [How to cite](#How-to-cite)
+    1. [Metrics](#Metrics)
+    2. [Final Evaluation](#Final)
+6. [Results](#Results)
+7. [Contact](#Contact)
+8. [How to cite](#How-to-cite)
 
 ## 1. Installation & Dependencies<a name="Dependencies"></a>
 The code has been tested with Python 3.6 and Pytorch 1.0.1.
@@ -61,6 +63,7 @@ If you want to use other datasets (e.g. Cifar10/100) as the pretraining dataset,
 ## 3. Training<a name="Training"></a>
 
 ## 4. Evaluation<a name="Evaluation"></a>
+### 4.1. Evaluation Metrics<a name="Metrics"></a>
 The main evaluation metrics used in this project are Frechet Inception Distance (FID) and Kernel Maximum Mean Discrepancy (KMMD). Inception score (IS) is also included in the code.
 
 FID and IS are calculated during the training using the Pytorch implementation provided by [BigGAN](https://github.com/ajbrock/BigGAN-PyTorch).
@@ -73,6 +76,18 @@ KMMD calculation is deactivated by default to avoid memory errors. To activate t
 
 <b>Note 2</b>: For very small datasets, FID score becomes unstable, since the inception statistics  of the real data cannot be estimated accurately.
 
+### 4.2. Final Evaluation<a name="Final"></a>
+In addition to the evaluation during the training, you can evaluate you final model using the following commands:
+
+For ImageNet experiments:
+```bash
+bash sample_ImageNet.sh
+```
+
+For Cifar experiments:
+```bash
+bash sample_cifar.sh
+```
 
 ## 5. Results<a name="Results"></a>
 
