@@ -73,7 +73,7 @@ For Cifar experiments:
 bash train_cifar.sh
 ```
 
-Some of the configuraions in "train_ImageNet.sh" / "train_cifar.sh" needs to be set according to your experiments. Some of the important parameters are:
+Some of the configuraions in "train_ImageNet.sh" / "train_cifar.sh" need to be set according to your experiments. Some of the important parameters are:
 <ul>
   <li><b>"--base_dir"</b>: The base directory containing your data, weights, logs, and generated samples (can be different from the code directory).</li>
   <li><b>"--experiment_name"</b>: The name of the experiment you are going to run (will be generated automatically if nothing is passed)</li>
