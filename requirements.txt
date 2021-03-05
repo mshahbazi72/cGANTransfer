@@ -1,4 +1,3 @@
-
 numpy
 scipy
 Pillow
@@ -6,9 +5,3 @@ torch==1.0.1
 torchvision
 h5py
 tqdm
-
-
-
-
-
-
