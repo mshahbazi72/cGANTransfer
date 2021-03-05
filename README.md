@@ -58,7 +58,9 @@ FID and IS are calculated during the training using the Pytorch implementation p
 
 For KMMD, the default implementation provided by [GAN Metrics](https://github.com/xuqiantong/GAN-Metrics) is used (Gaussian kernel with sigma=1).
 
-KMMD calculation is deactivated by default to avoid memory errors. To activate the KMMD calculation, use the flag "--kmmd" in the script and reduce the number of generated samples used for evaluation using "----num_inception_images" (default is 50000. We were able to avoid memory errors by reducing it to 25000). Note that reducing the number of sample might make the FID calculation a bit less accurate.
+KMMD calculation is deactivated by default to avoid memory errors. To activate the KMMD calculation, use the flag "--kmmd" in the script and reduce the number of generated samples used for evaluation using "----num_inception_images" (default=50000. We were able to avoid memory errors by setting it to 25000). 
+
+Note that reducing the number of generated samples might make the FID calculation a bit less accurate.
 
 
 ## 5. Results<a name="Results"></a>
