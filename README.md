@@ -1,7 +1,7 @@
 # Efficient Conditional GAN Transfer with Knowledge Propagation across Classes
 Paper: https://arxiv.org/pdf/2102.06696.pdf
 
-![alt text](images/concept.png")
+![alt text]("images/concept.png")
 
 
 ## Abstract
