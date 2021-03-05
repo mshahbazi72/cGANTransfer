@@ -27,23 +27,23 @@ The code will be available here soon.
   <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#how-to-cite">How to cite</a></li>
 </ol>
 
-## Dependencies
+## 1. Dependencies
 
 
-## Prepration
-### Directories
-### Data
-### Weights
+## 2. Prepration
+### 2.1. Directories
+### 2.2. Data
+### 2.3.Weights
 
-## Training
+## 3.Training
 
 
-## Results
+## 4.Results
 
-## Contact
+## 5.Contact
 For any questions, suggestions, or issues with the code, please contact Mohamad at <a>mshahbazi@vision.ee.ethz.ch</a>.
 
-## How to cite:
+## 6.How to cite:
 
 
 
