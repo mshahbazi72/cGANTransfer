@@ -45,8 +45,11 @@ Before training, you should create thesub-directories <b>"data"</b> and <b>"weig
 The multi-class data should be organized as different sub-directories for different classes under the main folder. The main folder should be called "ImageNet". The "ImageNet" folder should be placed in base_dir/data/
 
 base_dir
+
 |_ data
+
    |_ ImageNet
+   
       |_ class_1, ..., class_n
             
 Before training, BigGAN's pretrained weights should be placed in the sub-directory "weights" of the base directory.
