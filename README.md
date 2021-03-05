@@ -13,18 +13,18 @@ The code will be available here soon.
 
 ## Overview
 <ol>
-  <li><a href="#dep">Dependencies</a></li>
-  <li><a href="#prep">Prepration</a>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#dependencies">Dependencies</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#prepration">Prepration</a>
     <ol>
-      <li><a href="#dir">Directories</a></li>
-      <li><a href="#data">Data</a></li>
-      <li><a href="#weight">Weights</a></li>
+      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#directories">Directories</a></li>
+      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#data">Data</a></li>
+      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#weights">Weights</a></li>
     </ol>
   </li>
-  <li><a href="#train">Training</a></li>
-  <li><a href="#res">Results</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#cite">How to cite</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#training">Training</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#results">Results</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#contact">Contact</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#cite">How to cite</a></li>
 </ol>
 
 ## Dependencies
