@@ -13,18 +13,18 @@ The code will be available here soon.
 
 ## Overview
 <ol>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#dependencies">Dependencies</a></li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#prepration">Prepration</a>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#1dependencies">Dependencies</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#2prepration">Prepration</a>
     <ol>
-      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#directories">Directories</a></li>
-      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#data">Data</a></li>
-      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#weights">Weights</a></li>
+      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#21directories">Directories</a></li>
+      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#22data">Data</a></li>
+      <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#23weights">Weights</a></li>
     </ol>
   </li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#training">Training</a></li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#results">Results</a></li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#contact">Contact</a></li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#how-to-cite">How to cite</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#3training">Training</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#4results">Results</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#5contact">Contact</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#6how-to-cite">How to cite</a></li>
 </ol>
 
 ## 1. Dependencies
@@ -33,17 +33,17 @@ The code will be available here soon.
 ## 2. Prepration
 ### 2.1. Directories
 ### 2.2. Data
-### 2.3.Weights
+### 2.3. Weights
 
-## 3.Training
+## 3. Training
 
 
-## 4.Results
+## 4. Results
 
-## 5.Contact
+## 5. Contact
 For any questions, suggestions, or issues with the code, please contact Mohamad at <a>mshahbazi@vision.ee.ethz.ch</a>.
 
-## 6.How to cite:
+## 6. How to cite:
 
 
 
