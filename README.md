@@ -7,10 +7,10 @@ The code will be available here soon.
 
 ## Overview
 <ol>
-<item>[ Dependencies ](#dep)</item>
-<item>[ Preprations ](#prep)</item>
-<item>[ Training ](#train)</item>
-<item>[ Results ](#res)</item>
+<li>[ Dependencies ](#dep)</li>
+<li>[ Preprations ](#prep)</li>
+<li>[ Training ](#train)</li>
+<li>[ Results ](#res)</li>
 </ol>
 
 <a name="desc"></a>
