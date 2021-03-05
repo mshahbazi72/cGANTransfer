@@ -35,9 +35,9 @@ Before training, you should create thesub-directories <b>"data"</b> and <b>"weig
 
 ### 2.2. Data<a name="Data"></a>
 ### 2.3. Pretrained Weights<a name="Weights"></a>
-Before training, BigGAN's pretrained weights should be placed in the sub-directory "weights".
+Before training, BigGAN's pretrained weights should be placed in the sub-directory "weights" of the base directory.
 
-For BigGAN on ImageNet, you use the [pretrained weights](https://github.com/ajbrock/BigGAN-PyTorch#pretrained-models) provided by the BigGAN's authors.
+For BigGAN on ImageNet, you can use the [pretrained weights](https://github.com/ajbrock/BigGAN-PyTorch#pretrained-models) provided by the BigGAN's authors. In this project, we have used the [main checkpoint](https://drive.google.com/file/d/1nAle7FCVFZdix2--ks0r5JBkFnKw8ctW/view).
 
 If you want to use other datasets (e.g. Cifar10/100) as the pretraining dataset, you can first train the [BigGAN](https://github.com/ajbrock/BigGAN-PyTorch) on the desired dataset, and then, use the pretrained weights for cGANTransfer.
 
@@ -58,7 +58,7 @@ If you find this project helpful, please consider citing us as follows:
                    Huang, Zhiwu and
                    Paudel, ‪Danda Pani and
                    Chhatkuli, Ajad and
-                   Van Goll, Luc},
+                   Van Gool, Luc},
       year = {2021},
       booktitle = {2021 {IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2021}
 }
