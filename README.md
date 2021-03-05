@@ -14,7 +14,7 @@ The code will be available here soon.
 2. [Prepration](#Prepration)
     1. [Directories](#Directories)
     2. [Data](#Data)
-    3. [Weights](#Weights)
+    3. [Pretrained Weights](#Weights)
 3. [Training](#Training)
 4. [Evaluation](#Evaluation)
 5. [Results](#Results)
@@ -44,14 +44,13 @@ Before training, you should create thesub-directories <b>"data"</b> and <b>"weig
 ### 2.2. Data<a name="Data"></a>
 The multi-class data should be organized as different sub-directories for different classes under the main folder. The main folder should be called "ImageNet". The "ImageNet" folder should be placed in base_dir/data/
 
-base_dir
+base_dir -> data -> ImageNet -> [class_1, ..., class_n]
 
-|_ data
+Note: for Cifar experiments, rename "ImageNet" to "cifar":
+base_dir -> data -> cifar -> [class_1, ..., class_n]
 
-   |_ ImageNet
-   
-      |_ class_1, ..., class_n
-            
+### 2.3. Pretrained Weights<a name="Weights"></a>
+
 Before training, BigGAN's pretrained weights should be placed in the sub-directory "weights" of the base directory.
 
 For BigGAN on ImageNet, you can use the [pretrained weights](https://github.com/ajbrock/BigGAN-PyTorch#pretrained-models) provided by the BigGAN's authors. In this project, we have used the [main checkpoint](https://drive.google.com/file/d/1nAle7FCVFZdix2--ks0r5JBkFnKw8ctW/view).
