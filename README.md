@@ -10,7 +10,7 @@ Generative adversarial networks (GANs) have shown impressive results in both unc
 The code will be available here soon.
 
 ## Overview
-1. [Dependencies](#Dependencies)
+1. [Installation & Dependencies](#Dependencies)
 2. [Prepration](#Prepration)
     1. [Directories](#Directories)
     2. [Data](#Data)
@@ -20,7 +20,14 @@ The code will be available here soon.
 5. [Contact](#Contact)
 6. [How to cite](#How-to-cite)
 
-## 1. Dependencies<a name="Dependencies"></a>
+## 1. Installation & Dependencies<a name="Dependencies"></a>
+The code has been tested with Python 3.6 and Pytorch 1.0.1.
+
+
+To install the dependencies:
+```bash
+pip install -r requirements.txt
+```
 
 ## 2. Prepration<a name="Prepration"></a>
 ### 2.1. Directories<a name="Directories"></a>
