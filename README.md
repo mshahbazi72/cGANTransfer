@@ -15,10 +15,11 @@ The code will be available here soon.
     1. [Directories](#Directories)
     2. [Data](#Data)
     3. [Weights](#Weights)
-3. [Training](#training)
-4. [Results](#Results)
-5. [Contact](#Contact)
-6. [How to cite](#How-to-cite)
+3. [Training](#Training)
+4. [Evaluation](#Evaluation)
+5. [Results](#Results)
+6. [Contact](#Contact)
+7. [How to cite](#How-to-cite)
 
 ## 1. Installation & Dependencies<a name="Dependencies"></a>
 The code has been tested with Python 3.6 and Pytorch 1.0.1.
@@ -50,13 +51,22 @@ If you want to use other datasets (e.g. Cifar10/100) as the pretraining dataset,
 
 ## 3. Training<a name="Training"></a>
 
+## 4. Evaluation<a name="Evaluation"></a>
+The main evaluation metrics used in this project are Frechet Inception Distance (FID) and Kernel Maximum Mean Discrepancy (KMMD). Inception score (IS) is also included in the code.
 
-## 4. Results<a name="Results"></a>
+FID and IS are calculated during the training using the Pytorch implementation provided by [BigGAN](https://github.com/ajbrock/BigGAN-PyTorch).
 
-## 5. Contact<a name="Contact"></a>
+For KMMD, the default implementation provided by [GAN Metrics](https://github.com/xuqiantong/GAN-Metrics) is used (Gaussian kernel with sigma=1).
+
+KMMD calculation is deactivated by default to avoid memory errors. To activate the KMMD calculation, use the flag "--kmmd" in the script and reduce the number of generated samples used for evaluation using "----num_inception_images" (default is 50000. We were able to avoid memory errors by reducing it to 25000). Note that reducing the number of sample might make the FID calculation a bit less accurate.
+
+
+## 5. Results<a name="Results"></a>
+
+## 6. Contact<a name="Contact"></a>
 For any questions, suggestions, or issues with the code, please contact Mohamad at <a>mshahbazi@vision.ee.ethz.ch</a>.
 
-## 6. How to cite<a name="How-to-cite"></a>
+## 7. How to cite<a name="How-to-cite"></a>
 If you find this project helpful, please consider citing us as follows:
 ```bash
 @inproceedings{shahbazi2021cGANTransfer,
