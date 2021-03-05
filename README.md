@@ -24,13 +24,16 @@ The code will be available here soon.
   <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#training">Training</a></li>
   <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#results">Results</a></li>
   <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#contact">Contact</a></li>
-  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#cite">How to cite</a></li>
+  <li><a href="https://github.com/mshahbazi72/cGANTransfer/blob/main/README.md#how-to-cite">How to cite</a></li>
 </ol>
 
 ## Dependencies
 
 
 ## Prepration
+### Directories
+### Data
+### Weights
 
 ## Training
 
@@ -38,9 +41,7 @@ The code will be available here soon.
 ## Results
 
 ## Contact
-  <p>
-    For any questions, suggestions, or issues with the code, please contact Mohamad at <a>mshahbazi@vision.ee.ethz.ch</a>.
-  <p>
+For any questions, suggestions, or issues with the code, please contact Mohamad at <a>mshahbazi@vision.ee.ethz.ch</a>.
 
 ## How to cite:
 
