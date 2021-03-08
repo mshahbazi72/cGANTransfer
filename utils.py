@@ -253,14 +253,8 @@ def prepare_parser():
         help='Use a hash of the experiment name instead of the full config '
              '(default: %(default)s)')
     parser.add_argument(
-        # '--base_root', type=str, default='/home/fk1/fahad/data/imagenet/single_cate/single_cate_imagenet/n01514668_hdf',
-        # '--base_root', type=str, default='/home/fk1/fahad/data/imagenet/single_cate/single_cate_places/arch',
-        # '--base_root', type=str, default='/home/fk1/fahad/data/imagenet/single_cate/single_cate_places/alley',
-        # '--base_root', type=str, default='/home/fk1/fahad/data/imagenet/single_cate/BigGAN_BSA_data/anime25_BSA',
-        # '--base_root', type=str, default='/home/fk1/fahad/data/imagenet/single_cate/single_cate_places/alley_hdf/alley100_hdf',
-        # '--base_root', type=str, default='/home/fk1/fahad/data/imagenet/single_cate/single_cate_places/alley_hdf/alley500_hdf',
         '--base_root', type=str,
-        default='/home/fk1/fahad/data/imagenet/single_cate/single_cate_places/alley_hdf/alley1000_hdf',
+        default='./',
         help='Default location to store all weights, samples, data, and logs '
              ' (default: %(default)s),/DATA/data/Biggan_pytorch/single_cate/n01440764_hdf, /DATA/data/Biggan_pytorch/good_original_data')
     parser.add_argument(
