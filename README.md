@@ -16,8 +16,9 @@ The code will be available here soon.
     2. [Data](#Data)
     3. [Pretrained Weights](#Weights)
 3. [Training](#Training)
-    1. [Learning the BN parameters](#BN)
-    2. [Fine-tuning](#FT)
+    1. [Launch the training](#launch)
+    2. [Important training parameters](#params)
+    3. [Training phases](#phase)
 5. [Evaluation](#Evaluation)
     1. [Metrics](#Metrics)
     2. [Final Evaluation](#Final)
@@ -63,6 +64,7 @@ For BigGAN on ImageNet, you can use the [pretrained weights](https://github.com/
 If you want to use other datasets (e.g. Cifar10/100) as the pretraining dataset, you can first train the [BigGAN](https://github.com/ajbrock/BigGAN-PyTorch) on the desired dataset, and then, use the pretrained weights for cGANTransfer.
 
 ## 3. Training<a name="Training"></a>
+### 3.1. Launch the Training<a name="launch"></a>
 To launch the training on your target data:
 
 For ImageNet experiments:
@@ -76,7 +78,8 @@ bash train_cifar.sh
 ```
 The training can be done in two stages. In the first stage ("BN"), only the batch normalization (BN) parameters of the target is learned from pretraining classes using knowledge transfer. An extra stage of fine-tuning ("FT") can also be performed afterwards, to fine-tune the whole network on the target data.
 
-Some of the configuraions in "train_ImageNet.sh" / "train_cifar.sh" need to be set according to your experiments. Some of the important parameters are:
+### 3.2. Important Training Parameters<a name="params"></a>
+Some of the configuraions in  scripts "train_ImageNet.sh" and "train_cifar.sh" need to be set according to your experiments. Some of the important parameters are:
 <ul>
   <li><b>"base_dir"</b>: The base directory containing your data, weights, logs, and generated samples (can be different from the code directory).</li>
   <li><b>"experiment_name"</b>: The name of the experiment you are going to run (will be generated automatically if nothing is passed)</li>
@@ -89,6 +92,23 @@ Some of the configuraions in "train_ImageNet.sh" / "train_cifar.sh" need to be s
 
 </ul> 
 Make sure to understand the configuraion used in the scripts and their default values, by reading their descriptions in "utils.py"
+
+### 3.3. Training Phases<a name="params"></a>
+The training is assumed to start from a pre-trained network, and can be done in two phases.
+
+In the first stage (BN) , only the batch normalization (BN) parameters of the target classes are learned using transfering knowledge from pre-trained classes (see the paper for details). To train in this mode, set the value flag "--stage" to "BN" in the training script.
+
+After the first stage, an extra fine-tuning stage is also possible, in which the whole network (including the obtained BN prameters of the target data) is fine-tuned on target dataset. To enable fine-tuning, do the following steps:
+<ul>
+    <li>Set the value flag "--stage" to "FT" in the training script</li>
+    <li>Use the value flag "--resume" in the training script</li>
+    <li>Specify the suffix of the checkpoints for fine-tuning using "--load_weights" (E.g. "best" for state_dict_best.pth)</li>
+</ul>
+
+Note: To use the best model best on the evaluation saved during the training, pass the value "best#i" to the flag "--load_weights". #i is the number the saved best model. You can find the number of the best model in the main checkpoint's state_dict,
+
+
+
 
 ## 4. Evaluation<a name="Evaluation"></a>
 ### 4.1. Evaluation Metrics<a name="Metrics"></a>
