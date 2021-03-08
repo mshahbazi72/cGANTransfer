@@ -145,7 +145,7 @@ def run(config):
   get_inception_metrics = inception_utils.prepare_inception_metrics(config['dataset'], config['parallel'], config['no_fid'])
   # Prepare a simple function get metrics that we use for trunc curves
   def get_metrics():
-    sample = functools.partial(utils.sample, G=G, M=M, z_=z_, y_=y_, config=config)
+    sample = functools.partial(utils.sample, G=G, z_=z_, y_=y_, config=config)
     IS_mean, IS_std, FID , KMMD = get_inception_metrics(sample, config['num_inception_images'], num_splits=10, prints=False)
     # Prepare output string
     outstring = 'Using %s weights ' % ('ema' if config['use_ema'] else 'non-ema')
