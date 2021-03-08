@@ -91,7 +91,7 @@ Some of the configuraions in  scripts "train_ImageNet.sh" and "train_cifar.sh" n
   <li><b>"res_l2_scale"</b> & <b>"comb_l1_scale"</b>: The degrees of l2 and l1 regularization (details in section 4.3 of the paper)</li>
 
 </ul> 
-Make sure to understand the configuraion used in the scripts and their default values, by reading their descriptions in "utils.py"
+Make sure to understand the configuration used in the scripts and their default values, by reading their descriptions in "utils.py"
 
 ### 3.3. Training Stages<a name="stage"></a>
 The training is assumed to start from a pre-trained network, and can be done in two stages.
