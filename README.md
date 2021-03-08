@@ -102,7 +102,7 @@ After the first stage, an extra fine-tuning stage is also possible, in which the
 <ul>
     <li>Set the value flag "--stage" to "FT" in the training script</li>
     <li>Use the value flag "--resume" in the training script</li>
-    <li>Specify the suffix of the checkpoints for fine-tuning using "--load_weights" (E.g. "best" for state_dict_best.pth)</li>
+    <li>Specify the suffix of the checkpoints for fine-tuning using "--load_weights" (E.g. "best1" for state_dict_best1.pth)</li>
 </ul>
 
 Note: To use the best model best on the evaluation saved during the training, pass the value "best#i" to the flag "--load_weights". #i is the number the saved best model. You can find the number of the best model in the main checkpoint's state_dict,
