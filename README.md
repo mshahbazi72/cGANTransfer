@@ -140,7 +140,7 @@ Make sure to adjust the configuration in sample_ImageNet.sh / sample_cifar.sh ac
 
 ## 5. Results<a name="Results"></a>
 Generated images from 5 classes of Places365 only by learning the BN parameters:
-![Places365 Results](images/palces.png)
+![Places365 Results](images/places.png)
 
 
 ## 6. Contact<a name="Contact"></a>
