@@ -3,7 +3,7 @@
 # use running stats
 python sample.py \
 --experiment_name  ImageNet2Places_l0.01_res0.1 \
---load_weights best2
+--load_weights best2 \
 --base_root ./ \
 --dataset I128 --parallel --shuffle  --num_workers 8 --batch_size 64  \
 --n_class 5 \
