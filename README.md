@@ -18,7 +18,7 @@ The code will be available here soon.
 3. [Training](#Training)
     1. [Launch the training](#launch)
     2. [Important training parameters](#params)
-    3. [Training phases](#phase)
+    3. [Training stages](#stage)
 5. [Evaluation](#Evaluation)
     1. [Metrics](#Metrics)
     2. [Final Evaluation](#Final)
@@ -93,12 +93,12 @@ Some of the configuraions in  scripts "train_ImageNet.sh" and "train_cifar.sh" n
 </ul> 
 Make sure to understand the configuraion used in the scripts and their default values, by reading their descriptions in "utils.py"
 
-### 3.3. Training Phases<a name="params"></a>
-The training is assumed to start from a pre-trained network, and can be done in two phases.
+### 3.3. Training Stages<a name="stage"></a>
+The training is assumed to start from a pre-trained network, and can be done in two stages.
 
 In the first stage (BN) , only the batch normalization (BN) parameters of the target classes are learned using transfering knowledge from pre-trained classes (see the paper for details). To train in this mode, set the value flag "--stage" to "BN" in the training script.
 
-After the first stage, an extra fine-tuning stage is also possible, in which the whole network (including the obtained BN prameters of the target data) is fine-tuned on target dataset. To enable fine-tuning, do the following steps:
+In addition to the first stage, an extra fine-tuning stage is also possible, in which the whole network (including the obtained BN prameters of the target data) is fine-tuned on target dataset. To enable fine-tuning, do the following steps:
 <ul>
     <li>Set the value flag "--stage" to "FT" in the training script</li>
     <li>Use the value flag "--resume" in the training script</li>
