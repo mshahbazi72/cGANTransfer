@@ -16,7 +16,9 @@ The code will be available here soon.
     2. [Data](#Data)
     3. [Pretrained Weights](#Weights)
 3. [Training](#Training)
-4. [Evaluation](#Evaluation)
+    1. [Learning the BN parameters](#BN)
+    2. [Fine-tuning](#FT)
+5. [Evaluation](#Evaluation)
     1. [Metrics](#Metrics)
     2. [Final Evaluation](#Final)
 6. [Results](#Results)
@@ -61,8 +63,6 @@ For BigGAN on ImageNet, you can use the [pretrained weights](https://github.com/
 If you want to use other datasets (e.g. Cifar10/100) as the pretraining dataset, you can first train the [BigGAN](https://github.com/ajbrock/BigGAN-PyTorch) on the desired dataset, and then, use the pretrained weights for cGANTransfer.
 
 ## 3. Training<a name="Training"></a>
-The training can be done in two stages. In the first stage ("BN"), only the batch normalization (BN) parameters of the target is learned from pretraining classes using knowledge transfer. An extra stage of fine-tuning ("FT") can also be performed afterwards, to fine-tune the whole network on the target data.
-
 To launch the training on your target data:
 
 For ImageNet experiments:
@@ -74,6 +74,7 @@ For Cifar experiments:
 ```bash
 bash train_cifar.sh
 ```
+The training can be done in two stages. In the first stage ("BN"), only the batch normalization (BN) parameters of the target is learned from pretraining classes using knowledge transfer. An extra stage of fine-tuning ("FT") can also be performed afterwards, to fine-tune the whole network on the target data.
 
 Some of the configuraions in "train_ImageNet.sh" / "train_cifar.sh" need to be set according to your experiments. Some of the important parameters are:
 <ul>
