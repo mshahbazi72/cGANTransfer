@@ -85,18 +85,18 @@ In the experimetns conducted in the paper, for the ImageNet backbone, we trained
 
 ### 3.2. Important Training Parameters<a name="params"></a>
 Some of the configuraions in  scripts "train_ImageNet.sh" and "train_cifar.sh" need to be set according to your experiments. Some of the important parameters are:
-| Path | Description
+| Parameter | Description
 | :--- | :----------
-| base_dir | The base directory containing your data, weights, logs, and generated samples
-| experiment_name | The name of the experiment you are going to run (will be generated automatically if nothing is passed)
-| batch_size | The size of the training batch
-| stage | The stage of the training ["BN", "FT"].
-| n_class | The number of target classes
-| n_pretrain_class | The number of pretrained classes
-| resume | If used, weights are loaded from the last checkpoint. Otherwise, pretrained weights are loaded.
-| load_weights | The suffix of the checkpoint, in case of loading a specific checkpoint.
-| res_l2_scale & comb_l1_scale | The degrees of l2 regularization (details in section 4.3 of the paper)
-| comb_l1_scale | The degrees of l1 regularization (details in section 4.3 of the paper)
+| --base_dir | The base directory containing your data, weights, logs, and generated samples
+| --experiment_name | The name of the experiment you are going to run (will be generated automatically if nothing is passed)
+| --batch_size | The size of the training batch
+| --stage | The stage of the training ["BN", "FT"].
+| --n_class | The number of target classes
+| --n_pretrain_class | The number of pretrained classes
+| --resume | If used, weights are loaded from the last checkpoint. Otherwise, pretrained weights are loaded.
+| --load_weights | The suffix of the checkpoint, in case of loading a specific checkpoint.
+| --res_l2_scale & comb_l1_scale | The degrees of l2 regularization (details in section 4.3 of the paper)
+| --comb_l1_scale | The degrees of l1 regularization (details in section 4.3 of the paper)
 
 Make sure to understand the configuration used in the scripts and their default values, by reading their descriptions in "utils.py"
 
