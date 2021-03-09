@@ -58,6 +58,7 @@ Data prepration is done based on the setup you are using. The code is adapted to
     <li><b>ImageNet</b>: Using BigGAN pretrained on ImageNet (Image size 128x128)</li>
     <li><b>CIFAR</b>: Using BigGAN pretrained on CIFAR (Image size 32x32)</li>
 </ol>    
+
 The multi-class data should be organized as a main folder called "ImageNet" (regardless of the actual target data). The main folder should contain different sub-folders for different classes of the target data. The "ImageNet" folder should be placed in "base_dir/data/"
 ```bash
 base_dir/data/ImageNet/[class_1, ..., class_n]
