@@ -61,9 +61,10 @@ class Generator(nn.Module):
                  G_lr=5e-5, G_B1=0.0, G_B2=0.999, adam_eps=1e-8,
                  BN_eps=1e-5, SN_eps=1e-12, G_mixed_precision=False, G_fp16=False,
                  G_init='ortho', skip_init=False, no_optim=False,
-                 G_param='SN', norm_style='bn',
+                 G_param='SN', norm_style='bn', setup='ImageNet',
                  **kwargs):
         super(Generator, self).__init__()
+        self.setup = setup
         # Channel width mulitplier
         self.ch = G_ch
         # Dimensionality of the latent space
@@ -146,14 +147,14 @@ class Generator(nn.Module):
                                           which_linear=bn_linear,
                                           cross_replica=self.cross_replica,
                                           mybn=self.mybn,
-                                          input_size=self.shared_dim + self.z_chunk_size,
+                                          input_size=self.shared_dim + self.z_chunk_size if self.G_shared else self.n_pretrain_classes,
                                           norm_style=self.norm_style,
                                           eps=self.BN_eps,
-                                          pretrain_embedding_w=self.shared.weight,
+                                          pretrain_embedding_w=self.shared.weight if self.setup == 'ImageNet' else None,
                                           n_classes=self.n_classes,
                                           n_pretrain_classes=n_pretrain_classes,
                                           z_chunk_size=self.z_chunk_size,
-                                          shared_dim=self.shared_dim)
+                                          hier=self.hier)
 
         # First linear layer
         self.linear = self.which_linear(self.dim_z // self.num_slots,
@@ -234,10 +235,14 @@ class Generator(nn.Module):
     def load_previous_knowledge(self):
         for name, module in self.named_modules():
             if isinstance(module, layers.ccbn):
-                module.prev_knowledge_g.weight.data = torch.matmul(module.gain.weight[:, :self.shared_dim], module.pretrain_embedding_w.t())
-                module.prev_knowledge_b.weight.data = torch.matmul(module.bias.weight[:, :self.shared_dim], module.pretrain_embedding_w.t())
-                module.z_layer_g.weight.data = module.gain.weight[:, self.shared_dim:]
-                module.z_layer_b.weight.data = module.bias.weight[:, self.shared_dim:]
+                if self.setup == 'ImageNet':
+                    module.prev_knowledge_g.weight.data = torch.matmul(module.gain.weight[:, :self.shared_dim], module.pretrain_embedding_w.t())
+                    module.prev_knowledge_b.weight.data = torch.matmul(module.bias.weight[:, :self.shared_dim], module.pretrain_embedding_w.t())
+                    module.z_layer_g.weight.data = module.gain.weight[:, self.shared_dim:]
+                    module.z_layer_b.weight.data = module.bias.weight[:, self.shared_dim:]
+                elif self.setup == 'cifar':
+                    module.prev_knowledge_g.weight.data = module.gain.weight.t()
+                    module.prev_knowledge_b.weight.data = module.bias.weight.t()
 
     # Note on this forward function: we pass in a y vector which has
     # already been passed through G.shared to enable easy class-wise
