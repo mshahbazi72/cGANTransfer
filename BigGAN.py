@@ -152,8 +152,7 @@ class Generator(nn.Module):
                                           pretrain_embedding_w=self.shared.weight,
                                           n_classes=self.n_classes,
                                           n_pretrain_classes=n_pretrain_classes,
-                                          z_chunk_size=self.z_chunk_size,
-                                          hier=self.hier)
+                                          z_chunk_size=self.z_chunk_size)
 
         # First linear layer
         self.linear = self.which_linear(self.dim_z // self.num_slots,
