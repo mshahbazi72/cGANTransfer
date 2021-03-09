@@ -114,6 +114,7 @@ Note: To use the best model best on the evaluation saved during the training, pa
 
 
 ## 4. Evaluation<a name="Evaluation"></a>
+
 ### 4.1. Evaluation Metrics<a name="Metrics"></a>
 The main evaluation metrics used in this project are Frechet Inception Distance (FID) and Kernel Maximum Mean Discrepancy (KMMD). Inception score (IS) is also included in the code.
 
