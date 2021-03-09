@@ -39,6 +39,7 @@ pip install -r requirements.txt
 ```
 
 ## 2. Prepration<a name="Prepration"></a>
+
 ### 2.1. Directories<a name="Directories"></a>
 The base directory--which can be different from the code directory--will contain the following sub-directories:
 | Path | Description
@@ -52,14 +53,42 @@ The base directory--which can be different from the code directory--will contain
 Before training, you should create the sub-directories <b>"data"</b> and <b>"weights"</b>. Then place the data and pretraining weights inside them accordingly. the sub-directories <b>"logs"</b> and <b>"samples"</b> will be created automatically during the training.
 
 ### 2.2. Data<a name="Data"></a>
-The multi-class data should be organized as different sub-directories for different classes under the main folder. The main folder should be called "ImageNet". The "ImageNet" folder should be placed in "base_dir/data/"
+Data prepration is done based on the setup you are using. The code is adapted to two setups:
+<ol>
+    <li><b>ImageNet</b>: Using BigGAN pretrained on ImageNet (Image size 128x128)</li>
+    <li><b>CIFAR</b>: Using BigGAN pretrained on CIFAR (Image size 32x32)</li>
+</ol>    
+
+The multi-class data should be organized as a main folder called "ImageNet" for ImageNet setup or "cifar" for CIFAR setup. (regardless of the actual target data). The main folder should contain different sub-folders for different classes of the target data. The main folder then should be placed in "base_dir/data/"
 ```bash
 base_dir/data/ImageNet/[class_1, ..., class_n]
 ```
-Note: for Cifar experiments, rename "ImageNet" to "cifar":
 ```bash
 base_dir/data/cifar/[class_1, ..., class_n]
 ```
+Below you can find the datasets used in our experiments:
+<ul>
+    <li><a href="http://data.csail.mit.edu/places/places365/train_large_places365standard.tar">Places356</a>: 5 classes (Alley, Arch, Art Gallery, Auditorium,
+Ballroom) are selected and down-sampled to 500 images per class</li>
+    <li><a href="https://vcla.stat.ucla.edu/people/zhangzhang-si/HiT/exp5.html">Animal Face</a>: The class "Natural" is excluded in our experiments.</li>
+    <li><a href="https://github.com/knjcode/cifar2png">CIFAR100</a></li>
+</ul>
+
+Then, to pre-calulate the inception momentums of the target dataset for FID calculation:
+
+ImageNet setup:
+```bash
+bash  prepare_data_ImageNet
+```
+CIFAR setup:
+```bash
+bash  prepare_data_ImageNet
+```
+
+Note 1: The path to the main folder of the dataset should be modified in the data prepration scripts using "--data_root".
+Note2: For other setups other than ImageNet and CIFAR, you need to adapt the data-specific configuraion (type of the data loader, image size, root folder name, ...)
+
+
 ### 2.3. Pretrained Weights<a name="Weights"></a>
 
 Before training, BigGAN's pretrained weights should be placed in the sub-directory "weights" of the base directory.
