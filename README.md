@@ -46,8 +46,8 @@ The base directory--which can be different from the code directory--will contain
 | base_dir | The base directory containing your data, weights, logs, and generated samples
 | &ensp;&ensp;&boxvr;&nbsp; data | Contains the training data
 | &ensp;&ensp;&boxvr;&nbsp; weights | Contains the pretraining and training weights
-| &ensp;&ensp;&boxur;&nbsp; samples | Contains the saved images during evaluation
 | &ensp;&ensp;&boxvr;&nbsp; logs | Contains the training logs
+| &ensp;&ensp;&boxur;&nbsp; samples | Contains the saved images during evaluation
 
 <ul>
   <li><b>"data"</b>: Contains the training data</li>
