@@ -431,11 +431,6 @@ dset_dict = {'I32': dset.ImageFolder, 'I64': dset.ImageFolder,
              'I32_hdf5': dset.ILSVRC_HDF5, 'I64_hdf5': dset.ILSVRC_HDF5,
              'I128_hdf5': dset.ILSVRC_HDF5, 'I256_hdf5': dset.ILSVRC_HDF5,
              'C10': dset.CIFAR10, 'C100': dset.CIFAR100, 'C10_ImageFolder': dset.ImageFolder, 'C100_ImageFolder': dset.ImageFolder}
-setup_dict = {'I32': 'ImageNet', 'I64': 'ImageNet',
-              'I128': 'ImageNet', 'I256': 'ImageNet',
-              'I32_hdf5': 'ImageNet', 'I64_hdf5': 'ImageNet',
-              'I128_hdf5': 'ImageNet', 'I256_hdf5': 'ImageNet',
-              'C10': 'cifar', 'C100': 'cifar', 'C10_ImageFolder': 'cifar', 'C100_ImageFolder': 'cifar'}
 imsize_dict = {'I32': 32, 'I32_hdf5': 32,
                'I64': 64, 'I64_hdf5': 64,
                'I128': 128, 'I128_hdf5': 128,

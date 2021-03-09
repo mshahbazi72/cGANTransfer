@@ -275,14 +275,13 @@ def groupnorm(x, norm_style):
 # Knowledge transfer is performed in these layers
 class ccbn(nn.Module):
   def __init__(self, output_size, input_size, n_classes, n_pretrain_classes, z_chunk_size, pretrain_embedding_w, which_linear, eps=1e-5, momentum=0.1,
-               cross_replica=False, mybn=False, norm_style='bn', hier=False):
+               cross_replica=False, mybn=False, norm_style='bn'):
     super(ccbn, self).__init__()
     self.output_size = output_size
     self.input_size = input_size
     self.n_pretrain_classes = n_pretrain_classes
     self.n_classes = n_classes  # Target
     self.pretrain_embedding_w = pretrain_embedding_w
-    self.hier = hier
     # Prepare gain and bias layers
     self.gain = which_linear(input_size, output_size)
     self.bias = which_linear(input_size, output_size)
@@ -299,9 +298,8 @@ class ccbn(nn.Module):
 
     # For projecting the hierarchical noise
     # initialized by the corresponding part of the pretrained model using the method "load_previous_knowledge" of the generator
-    if hier:
-      self.z_layer_g = SNLinear(z_chunk_size, output_size)
-      self.z_layer_b = SNLinear(z_chunk_size, output_size)
+    self.z_layer_g = SNLinear(z_chunk_size, output_size)
+    self.z_layer_b = SNLinear(z_chunk_size, output_size)
 
     # Residuals of the BN params for learnning extra information in addition to the knowledge propagation
     self.res_g = nn.Linear(n_classes, output_size, bias=False)
@@ -328,11 +326,8 @@ class ccbn(nn.Module):
 
   def forward(self, x, y):
 
-    if self.hier:
-      cl = y[:, :self.n_classes]
-      z = y[:, self.n_classes:]
-    else:
-      cl = y.type(x.type())
+    cl = y[:, :self.n_classes]
+    z = y[:, self.n_classes:]
 
     # Obtain the similarity scores of the classes
     w_g = self.comb_layer_g(cl)
@@ -340,12 +335,9 @@ class ccbn(nn.Module):
 
     # Obtain the gain and the biases of the classes by combining base knowledge using similarity scores.
     # Residuals and projected hierarchical noise are also added
-    if self.hier:
-      gain = (1 + self.prev_knowledge_g(w_g) + self.z_layer_g(z) + self.res_g(cl)).view(y.size(0), -1, 1, 1)
-      bias = (self.prev_knowledge_b(w_b) + self.z_layer_b(z) + self.res_b(cl)).view(y.size(0), -1, 1, 1)
-    else:
-      gain = (1 + self.prev_knowledge_g(w_g) + self.res_g(cl)).view(y.size(0), -1, 1, 1)
-      bias = (self.prev_knowledge_b(w_b) + self.res_b(cl)).view(y.size(0), -1, 1, 1)
+    gain = (1 + self.prev_knowledge_g(w_g) + self.z_layer_g(z) + self.res_g(cl)).view(y.size(0), -1, 1, 1)
+    bias = (self.prev_knowledge_b(w_b) + self.z_layer_b(z) + self.res_b(cl)).view(y.size(0), -1, 1, 1)
+
 
    # If using my batchnorm
     if self.mybn or self.cross_replica:

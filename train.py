@@ -30,7 +30,6 @@ def run(config):
   # and size of the images from the dataset, passing in a pytorch object
   # for the activation specified as a string)
   config['resolution'] = utils.imsize_dict[config['dataset']]
-  config['setup'] = utils.setup_dict[config['dataset']]
   config['G_activation'] = utils.activation_dict[config['G_nl']]
   config['D_activation'] = utils.activation_dict[config['D_nl']]
   # By default, skip init if resuming training.
