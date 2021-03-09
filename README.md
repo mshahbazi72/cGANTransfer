@@ -68,9 +68,9 @@ base_dir/data/cifar/[class_1, ..., class_n]
 ```
 Below you can find the datasets used in our experimentsL
 <ul>
-    <li>[Places356]()</li>
-    <li>[Animal Face]()</li>
-    <li>[CIFAR100]()</li>
+    <li><a>Places356</a></li>
+    <li><a>Animal Face</a></li>
+    <li><a>CIFAR100</a></li>
 </ul>
 
 Then, to pre-calulate the inception momentums of the target dataset for FID calculation:
