@@ -40,11 +40,6 @@ pip install -r requirements.txt
 
 ## 2. Prepration<a name="Prepration"></a>
 
-Data prepration is done based on the setup you are using. The code is adapted to two setups:
-    1. ImageNet: Using BigGAN pretrained on ImageNet (Image size 128x128)
-    2. cifar: Using BigGAN pretrained on ImageNet (Image size 32x32)
-    3. 
-For other setups, you need to adapt the data-specific configuraion  (type of the data loader, image size, root folder name, ...)
 ### 2.1. Directories<a name="Directories"></a>
 The base directory--which can be different from the code directory--will contain the following sub-directories:
 | Path | Description
@@ -58,6 +53,10 @@ The base directory--which can be different from the code directory--will contain
 Before training, you should create the sub-directories <b>"data"</b> and <b>"weights"</b>. Then place the data and pretraining weights inside them accordingly. the sub-directories <b>"logs"</b> and <b>"samples"</b> will be created automatically during the training.
 
 ### 2.2. Data<a name="Data"></a>
+Data prepration is done based on the setup you are using. The code is adapted to two setups:
+    1. ImageNet: Using BigGAN pretrained on ImageNet (Image size 128x128)
+    2. cifar: Using BigGAN pretrained on ImageNet (Image size 32x32)
+    
 The multi-class data should be organized as a main folder called "ImageNet" (regardless of the actual target data). The main folder should contain different sub-folders for different classes of the target data. The "ImageNet" folder should be placed in "base_dir/data/"
 ```bash
 base_dir/data/ImageNet/[class_1, ..., class_n]
@@ -78,7 +77,9 @@ CIFAR setup:
 bash  prepare_data_ImageNet
 ```
 
-Note: The path to the main folder of the dataset should be modified in the data prepration scripts using "--data_root".
+Note 1: The path to the main folder of the dataset should be modified in the data prepration scripts using "--data_root".
+Note2: For other setups other than "ImageNet" and "cifar", you need to adapt the data-specific configuraion (type of the data loader, image size, root folder name, ...)
+
 
 ### 2.3. Pretrained Weights<a name="Weights"></a>
 
