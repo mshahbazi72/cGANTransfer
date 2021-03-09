@@ -64,7 +64,7 @@ Before training, BigGAN's pretrained weights should be placed in the sub-directo
 
 For BigGAN on ImageNet, you can use the [pretrained weights](https://github.com/ajbrock/BigGAN-PyTorch#pretrained-models) provided by the BigGAN's authors. In this project, we have used the [main checkpoint](https://drive.google.com/file/d/1nAle7FCVFZdix2--ks0r5JBkFnKw8ctW/view).
 
-If you want to use other datasets (e.g. Cifar10/100) as the pretraining dataset, you can first train the [BigGAN](https://github.com/ajbrock/BigGAN-PyTorch) on the desired dataset, and then, use the pretrained weights for cGANTransfer.
+If you want to use other datasets (e.g. CIFAR10/100) as the pretraining dataset, you can first train the [BigGAN](https://github.com/ajbrock/BigGAN-PyTorch) on the desired dataset, and then, use the pretrained weights for cGANTransfer.
 
 ## 3. Training<a name="Training"></a>
 ### 3.1. Launch the Training<a name="launch"></a>
@@ -75,11 +75,11 @@ For ImageNet experiments:
 bash train_ImageNet.sh
 ```
 
-For Cifar experiments:
+For CIFAR experiments:
 ```bash
 bash train_cifar.sh
 ```
-The training can be done in two stages. In the first stage ("BN"), only the batch normalization (BN) parameters of the target is learned from pretraining classes using knowledge transfer. An extra stage of fine-tuning ("FT") can also be performed afterwards, to fine-tune the whole network on the target data.
+In the experimetns conducted in the paper, for the ImageNet backbone, we trained the model with the batch size of 256 using 8 V100 (16G) GPUs. For the CIFAR experiments, the model is trained with the batch size of 50  using one V100 (16G) GPU.
 
 ### 3.2. Important Training Parameters<a name="params"></a>
 Some of the configuraions in  scripts "train_ImageNet.sh" and "train_cifar.sh" need to be set according to your experiments. Some of the important parameters are:
@@ -135,7 +135,7 @@ For ImageNet experiments:
 bash sample_ImageNet.sh
 ```
 
-For Cifar experiments:
+For CIFAR experiments:
 ```bash
 bash sample_cifar.sh
 ```
