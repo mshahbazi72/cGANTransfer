@@ -90,7 +90,7 @@ Some of the configuraions in  scripts "train_ImageNet.sh" and "train_cifar.sh" n
 | --base_dir | The base directory containing your data, weights, logs, and generated samples
 | --experiment_name | The name of the experiment you are going to run (will be generated automatically if nothing is passed)
 | --batch_size | The size of the training batch
-| --stage | The stage of the training ["BN", "FT"].
+| --stage | The stage of the training ["BN", "FT"] (Details in Sec. 3.3 of this README file).
 | --n_class | The number of target classes
 | --n_pretrain_class | The number of pretrained classes
 | --resume | If used, weights are loaded from the last checkpoint. Otherwise, pretrained weights are loaded
