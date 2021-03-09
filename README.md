@@ -39,6 +39,12 @@ pip install -r requirements.txt
 ```
 
 ## 2. Prepration<a name="Prepration"></a>
+
+Data prepration is done based on the setup you are using. The code is adapted to two setups:
+    1. ImageNet: Using BigGAN pretrained on ImageNet (Image size 128x128)
+    2. cifar: Using BigGAN pretrained on ImageNet (Image size 32x32)
+    3. 
+For other setups, you need to adapt the data-specific configuraion  (type of the data loader, image size, root folder name, ...)
 ### 2.1. Directories<a name="Directories"></a>
 The base directory--which can be different from the code directory--will contain the following sub-directories:
 | Path | Description
