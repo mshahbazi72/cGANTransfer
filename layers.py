@@ -281,7 +281,7 @@ class ccbn(nn.Module):
     self.input_size = input_size
     self.n_pretrain_classes = n_pretrain_classes
     self.n_classes = n_classes  # Target
-    self.pretrain_embedding_w=pretrain_embedding_w
+    self.pretrain_embedding_w = pretrain_embedding_w
     self.hier = hier
     # Prepare gain and bias layers
     self.gain = which_linear(input_size, output_size)

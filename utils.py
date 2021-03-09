@@ -931,8 +931,7 @@ def sample(G, z_, y_, config):
         if config['parallel']:
             G_z = nn.parallel.data_parallel(G, (z_, G.new_shared(y_)))
         else:
-            G_z = G(z_, G.new_shared(y_))  # Mohamad
-
+            G_z = G(z_, G.new_shared(y_))
         return G_z, y_
 
 

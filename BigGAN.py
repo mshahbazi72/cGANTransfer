@@ -249,10 +249,9 @@ class Generator(nn.Module):
     # interpolation later. If we passed in the one-hot and then ran it through
     # G.shared in this forward function, it would be harder to handle.
     def forward(self, z, y):
-        y = F.one_hot(y, num_classes=self.n_classes)
-
         # If hierarchical, concatenate zs and ys
         if self.hier:
+            y = F.one_hot(y, num_classes=self.n_classes)
             zs = torch.split(z, self.z_chunk_size, 1)
             z = zs[0]
             ys = [torch.cat([y, item], 1) for item in zs[1:]]
@@ -442,9 +441,8 @@ class G_D(nn.Module):
     def forward(self, z, gy, x=None, dy=None, train_G=False, return_G_z=False,
                 split_D=False,):
         # If training G, enable grad tape
-
         with torch.set_grad_enabled(train_G):
-            G_z = self.G(z, self.G.new_shared(gy))
+                G_z = self.G(z, self.G.new_shared(gy))
             # Cast as necessary
             if self.G.fp16 and not self.D.fp16:
                 G_z = G_z.float()
