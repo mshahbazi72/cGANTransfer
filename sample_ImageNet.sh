@@ -6,7 +6,7 @@ python sample.py \
 --load_weights best2 \
 --base_root ./ \
 --dataset I128 --parallel --shuffle  --num_workers 8 --batch_size 64  \
---n_class 5 \
+--n_class 5 --n_pretrain_classes 1000 \
 --num_G_accumulations 8 --num_D_accumulations 8 \
 --num_D_steps 1 --G_lr 1e-4 --D_lr 4e-4 --D_B2 0.999 --G_B2 0.999 \
 --G_attn 64 --D_attn 64 \
