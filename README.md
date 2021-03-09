@@ -41,6 +41,14 @@ pip install -r requirements.txt
 ## 2. Prepration<a name="Prepration"></a>
 ### 2.1. Directories<a name="Directories"></a>
 The base directory will contain the following sub-directories:
+| Path | Description
+| :--- | :----------
+| base_dir | The base directory containing your data, weights, logs, and generated samples (can be different from the code directory) S3
+| &ensp;&ensp;&boxvr;&nbsp; data | Contains the training data
+| &ensp;&ensp;&boxvr;&nbsp; weights | Contains the pretraining and training weights
+| &ensp;&ensp;&boxvr;&nbsp; logs | Contains the training logs
+| &ensp;&ensp;&boxur;&nbsp; samples | Contains the saved images during evaluation
+
 <ul>
   <li><b>"data"</b>: Contains the training data</li>
   <li><b>"weights"</b>: Contains the pretraining and training weights</li>
