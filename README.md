@@ -55,8 +55,8 @@ Before training, you should create the sub-directories <b>"data"</b> and <b>"wei
 ### 2.2. Data<a name="Data"></a>
 Data prepration is done based on the setup you are using. The code is adapted to two setups:
 <ol>
-    <li>**ImageNet**: Using BigGAN pretrained on ImageNet (Image size 128x128)</li>
-    <li>**CIFAR**: Using BigGAN pretrained on ImageNet (Image size 32x32)</li>
+    <li><b>ImageNet</b>: Using BigGAN pretrained on ImageNet (Image size 128x128)</li>
+    <li><b>CIFAR</b>: Using BigGAN pretrained on ImageNet (Image size 32x32)</li>
 </ol>    
 The multi-class data should be organized as a main folder called "ImageNet" (regardless of the actual target data). The main folder should contain different sub-folders for different classes of the target data. The "ImageNet" folder should be placed in "base_dir/data/"
 ```bash
