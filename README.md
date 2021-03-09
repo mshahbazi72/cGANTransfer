@@ -1,4 +1,7 @@
 # Efficient Conditional GAN Transfer with Knowledge Propagation across Classes
+
+### Accepted to CVPR 2021
+
 Authors: [Mohamad Shahbazi](https://people.ee.ethz.ch/~mshahbazi/), [Zhiwu Huang](https://zhiwu-huang.github.io/), [Danda P.Paudel](https://people.ee.ethz.ch/~paudeld/), [Ajad Chhatkuli](https://scholar.google.ch/citations?hl=en&user=3BHMHU4AAAAJ), and [Luc Van Gool](https://scholar.google.ch/citations?hl=en&user=TwMib_QAAAAJ)
 <br> Paper: https://arxiv.org/pdf/2102.06696.pdf
 
@@ -37,31 +40,33 @@ pip install -r requirements.txt
 
 ## 2. Prepration<a name="Prepration"></a>
 ### 2.1. Directories<a name="Directories"></a>
-The base directory will contain the following sub-directories:
-<ul>
-  <li><b>"data"</b>: Contains the training data</li>
-  <li><b>"weights"</b>: Contains the pretraining and training weights</li>
-  <li><b>"logs"</b>: Contains the training logs</li>
-  <li><b>"samples"</b>: Contains the saved images during evaluation</li>
-</ul> 
-Before training, you should create thesub-directories <b>"data"</b> and <b>"weights"</b>. Then place the data and pretraining weights inside them accordingly. the sub-directories <b>"logs"</b> and <b>"samples"</b> will be created automatically during the training.
+The base directory--which can be different from the code directory--will contain the following sub-directories:
+| Path | Description
+| :--- | :----------
+| base_dir | The base directory containing your data, weights, logs, and generated samples
+| &ensp;&ensp;&boxvr;&nbsp; data | Contains the training data
+| &ensp;&ensp;&boxvr;&nbsp; weights | Contains the pretraining and training weights
+| &ensp;&ensp;&boxvr;&nbsp; logs | Contains the training logs
+| &ensp;&ensp;&boxur;&nbsp; samples | Contains the saved images during evaluation
+
+Before training, you should create the sub-directories <b>"data"</b> and <b>"weights"</b>. Then place the data and pretraining weights inside them accordingly. the sub-directories <b>"logs"</b> and <b>"samples"</b> will be created automatically during the training.
 
 ### 2.2. Data<a name="Data"></a>
 The multi-class data should be organized as different sub-directories for different classes under the main folder. The main folder should be called "ImageNet". The "ImageNet" folder should be placed in "base_dir/data/"
-
-base_dir -> data -> ImageNet -> [class_1, ..., class_n]
-
+```bash
+base_dir/data/ImageNet/[class_1, ..., class_n]
+```
 Note: for Cifar experiments, rename "ImageNet" to "cifar":
-
-base_dir -> data -> cifar -> [class_1, ..., class_n]
-
+```bash
+base_dir/data/cifar/[class_1, ..., class_n]
+```
 ### 2.3. Pretrained Weights<a name="Weights"></a>
 
 Before training, BigGAN's pretrained weights should be placed in the sub-directory "weights" of the base directory.
 
 For BigGAN on ImageNet, you can use the [pretrained weights](https://github.com/ajbrock/BigGAN-PyTorch#pretrained-models) provided by the BigGAN's authors. In this project, we have used the [main checkpoint](https://drive.google.com/file/d/1nAle7FCVFZdix2--ks0r5JBkFnKw8ctW/view).
 
-If you want to use other datasets (e.g. Cifar10/100) as the pretraining dataset, you can first train the [BigGAN](https://github.com/ajbrock/BigGAN-PyTorch) on the desired dataset, and then, use the pretrained weights for cGANTransfer.
+If you want to use other datasets (e.g. CIFAR10/100) as the pretraining dataset, you can first train the [BigGAN](https://github.com/ajbrock/BigGAN-PyTorch) on the desired dataset, and then, use the pretrained weights for cGANTransfer.
 
 ## 3. Training<a name="Training"></a>
 ### 3.1. Launch the Training<a name="launch"></a>
@@ -72,25 +77,27 @@ For ImageNet experiments:
 bash train_ImageNet.sh
 ```
 
-For Cifar experiments:
+For CIFAR experiments:
 ```bash
 bash train_cifar.sh
 ```
-The training can be done in two stages. In the first stage ("BN"), only the batch normalization (BN) parameters of the target is learned from pretraining classes using knowledge transfer. An extra stage of fine-tuning ("FT") can also be performed afterwards, to fine-tune the whole network on the target data.
+In the experimetns conducted in the paper, for the ImageNet backbone, we trained the model with the batch size of 256 using 8 V100 (16G) GPUs. For the CIFAR experiments, the model is trained with the batch size of 50  using one V100 (16G) GPU.
 
 ### 3.2. Important Training Parameters<a name="params"></a>
 Some of the configuraions in  scripts "train_ImageNet.sh" and "train_cifar.sh" need to be set according to your experiments. Some of the important parameters are:
-<ul>
-  <li><b>"base_dir"</b>: The base directory containing your data, weights, logs, and generated samples (can be different from the code directory).</li>
-  <li><b>"experiment_name"</b>: The name of the experiment you are going to run (will be generated automatically if nothing is passed)</li>
-  <li><b>"batch_size"</b>: The batch size!</li>
-  <li><b>"stage"</b>: The stage of the training ("BN": only training the BN parameter. "FT": fine-tuning everythin after the stage "BN")</li>
-  <li><b>"n_class"</b>: The number of target classes</li>
-  <li><b>"n_pretrain_class"</b>: The number of pretrained classes</li>
-  <li><b>"resume"</b>: If used, weights are loaded from the last checkpoint. Otherwise, pretrained weights are loaded</li>
-  <li><b>"res_l2_scale"</b> & <b>"comb_l1_scale"</b>: The degrees of l2 and l1 regularization (details in section 4.3 of the paper)</li>
+| Parameter | Description
+| :--- | :----------
+| --base_dir | The base directory containing your data, weights, logs, and generated samples
+| --experiment_name | The name of the experiment you are going to run (will be generated automatically if nothing is passed)
+| --batch_size | The size of the training batch
+| --stage | The stage of the training ["BN", "FT"] (Details in Sec. 3.3 of this README file).
+| --n_class | The number of target classes
+| --n_pretrain_class | The number of pretrained classes
+| --resume | If used, weights are loaded from the last checkpoint. Otherwise, pretrained weights are loaded
+| --load_weights | The suffix of the checkpoint, in case of loading a specific checkpoint
+| --res_l2_scale | The degrees of l2 regularization (details in section 4.3 of the paper)
+| --comb_l1_scale | The degrees of l1 regularization (details in section 4.3 of the paper)
 
-</ul> 
 Make sure to understand the configuration used in the scripts and their default values, by reading their descriptions in "utils.py"
 
 ### 3.3. Training Stages<a name="stage"></a>
@@ -111,6 +118,7 @@ Note: To use the best model best on the evaluation saved during the training, pa
 
 
 ## 4. Evaluation<a name="Evaluation"></a>
+
 ### 4.1. Evaluation Metrics<a name="Metrics"></a>
 The main evaluation metrics used in this project are Frechet Inception Distance (FID) and Kernel Maximum Mean Discrepancy (KMMD). Inception score (IS) is also included in the code.
 
@@ -132,7 +140,7 @@ For ImageNet experiments:
 bash sample_ImageNet.sh
 ```
 
-For Cifar experiments:
+For CIFAR experiments:
 ```bash
 bash sample_cifar.sh
 ```
