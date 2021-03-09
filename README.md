@@ -52,7 +52,7 @@ The base directory--which can be different from the code directory--will contain
 Before training, you should create the sub-directories <b>"data"</b> and <b>"weights"</b>. Then place the data and pretraining weights inside them accordingly. the sub-directories <b>"logs"</b> and <b>"samples"</b> will be created automatically during the training.
 
 ### 2.2. Data<a name="Data"></a>
-The multi-class data should be organized as different sub-directories for different classes under the main folder. The main folder should be called "ImageNet". The "ImageNet" folder should be placed in "base_dir/data/"
+The multi-class data should be organized as a main folder called "ImageNet" (regardless of the actual target data). The main folder should contain different sub-folders for different classes of the target data. The "ImageNet" folder should be placed in "base_dir/data/"
 ```bash
 base_dir/data/ImageNet/[class_1, ..., class_n]
 ```
@@ -60,6 +60,20 @@ Note: for Cifar experiments, rename "ImageNet" to "cifar":
 ```bash
 base_dir/data/cifar/[class_1, ..., class_n]
 ```
+
+Then, to pre-calulate the inception momentums of the target dataset for FID calculation:
+
+ImageNet setup:
+```bash
+bash  prepare_data_ImageNet
+```
+CIFAR setup:
+```bash
+bash  prepare_data_ImageNet
+```
+
+Note: The path to the main folder of the dataset should be modified in the data prepration scripts using "--data_root".
+
 ### 2.3. Pretrained Weights<a name="Weights"></a>
 
 Before training, BigGAN's pretrained weights should be placed in the sub-directory "weights" of the base directory.
