@@ -4,7 +4,7 @@ python train.py \
 --base_root ./ \
 --batch_size 256  --stage BN \
 --n_classes 5 --n_pretrain_classes 1000 \
---dataset I128_hdf5 --parallel --shuffle  --num_workers 8 \
+--dataset I128 --parallel --shuffle  --num_workers 8 \
 --res_l2_scale 0.1 --comb_l1_scale 0.01 \
 --test_every 100 --save_every 100 --num_best_copies 5 --num_save_copies 2 --seed 0 \
 --num_G_accumulations 8 --num_D_accumulations 8 \
