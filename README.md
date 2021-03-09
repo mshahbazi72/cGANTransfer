@@ -63,7 +63,7 @@ The multi-class data should be organized as a main folder called "ImageNet" (reg
 ```bash
 base_dir/data/ImageNet/[class_1, ..., class_n]
 ```
-Note: for Cifar experiments, rename "ImageNet" to "cifar":
+Note: for CIFAR experiments, name the main folder "cifar" isntead of "ImageNet":
 ```bash
 base_dir/data/cifar/[class_1, ..., class_n]
 ```
