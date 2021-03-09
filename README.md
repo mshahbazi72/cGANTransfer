@@ -49,7 +49,7 @@ The base directory--which can be different from the code directory--will contain
 | &ensp;&ensp;&boxvr;&nbsp; logs | Contains the training logs
 | &ensp;&ensp;&boxur;&nbsp; samples | Contains the saved images during evaluation
 
-Before training, you should create thesub-directories <b>"data"</b> and <b>"weights"</b>. Then place the data and pretraining weights inside them accordingly. the sub-directories <b>"logs"</b> and <b>"samples"</b> will be created automatically during the training.
+Before training, you should create the sub-directories <b>"data"</b> and <b>"weights"</b>. Then place the data and pretraining weights inside them accordingly. the sub-directories <b>"logs"</b> and <b>"samples"</b> will be created automatically during the training.
 
 ### 2.2. Data<a name="Data"></a>
 The multi-class data should be organized as different sub-directories for different classes under the main folder. The main folder should be called "ImageNet". The "ImageNet" folder should be placed in "base_dir/data/"
