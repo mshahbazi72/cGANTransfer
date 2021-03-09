@@ -59,13 +59,19 @@ Data prepration is done based on the setup you are using. The code is adapted to
     <li><b>CIFAR</b>: Using BigGAN pretrained on CIFAR (Image size 32x32)</li>
 </ol>    
 
-The multi-class data should be organized as a main folder called "ImageNet" for ImageNet setup or "cifar" for CIFAR setup. (regardless of the actual target data). The main folder should contain different sub-folders for different classes of the target data. The "ImageNet" folder should be placed in "base_dir/data/"
+The multi-class data should be organized as a main folder called "ImageNet" for ImageNet setup or "cifar" for CIFAR setup. (regardless of the actual target data). The main folder should contain different sub-folders for different classes of the target data. The main folder then should be placed in "base_dir/data/"
 ```bash
 base_dir/data/ImageNet/[class_1, ..., class_n]
 ```
 ```bash
 base_dir/data/cifar/[class_1, ..., class_n]
 ```
+Below you can find the datasets used in our experimentsL
+<ul>
+    <li>[Places356]()</li>
+    <li>[Animal Face]()</li>
+    <li>[CIFAR100]()</li>
+</ul>
 
 Then, to pre-calulate the inception momentums of the target dataset for FID calculation:
 
