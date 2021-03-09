@@ -66,11 +66,11 @@ base_dir/data/ImageNet/[class_1, ..., class_n]
 ```bash
 base_dir/data/cifar/[class_1, ..., class_n]
 ```
-Below you can find the datasets used in our experimentsL
+Below you can find the datasets used in our experiments:
 <ul>
-    <li><a>Places356</a></li>
-    <li><a>Animal Face</a></li>
-    <li><a>CIFAR100</a></li>
+    <li><a href="http://data.csail.mit.edu/places/places365/train_large_places365standard.tar"><b>Places356</b>: 5 classes are selected and down-sampled to 500 images per class</a></li>
+    <li><a href="https://vcla.stat.ucla.edu/people/zhangzhang-si/HiT/exp5.html"><b>Animal Face</b>: The class "Natural" is excluded in our experiments</a></li>
+    <li><a href="https://github.com/knjcode/cifar2png">CIFAR100</a></li>
 </ul>
 
 Then, to pre-calulate the inception momentums of the target dataset for FID calculation:
