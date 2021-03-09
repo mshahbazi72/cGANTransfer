@@ -68,7 +68,8 @@ base_dir/data/cifar/[class_1, ..., class_n]
 ```
 Below you can find the datasets used in our experiments:
 <ul>
-    <li><a href="http://data.csail.mit.edu/places/places365/train_large_places365standard.tar">Places356</a>: 5 classes are selected and down-sampled to 500 images per class</li>
+    <li><a href="http://data.csail.mit.edu/places/places365/train_large_places365standard.tar">Places356</a>: 5 classes (Alley, Arch, Art Gallery, Auditorium,
+Ballroom) are selected and down-sampled to 500 images per class</li>
     <li><a href="https://vcla.stat.ucla.edu/people/zhangzhang-si/HiT/exp5.html">Animal Face</a>: The class "Natural" is excluded in our experiments.</li>
     <li><a href="https://github.com/knjcode/cifar2png">CIFAR100</a></li>
 </ul>
