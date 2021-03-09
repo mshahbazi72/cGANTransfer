@@ -95,7 +95,7 @@ Some of the configuraions in  scripts "train_ImageNet.sh" and "train_cifar.sh" n
 | --n_pretrain_class | The number of pretrained classes
 | --resume | If used, weights are loaded from the last checkpoint. Otherwise, pretrained weights are loaded.
 | --load_weights | The suffix of the checkpoint, in case of loading a specific checkpoint.
-| --res_l2_scale & comb_l1_scale | The degrees of l2 regularization (details in section 4.3 of the paper)
+| --res_l2_scale | The degrees of l2 regularization (details in section 4.3 of the paper)
 | --comb_l1_scale | The degrees of l1 regularization (details in section 4.3 of the paper)
 
 Make sure to understand the configuration used in the scripts and their default values, by reading their descriptions in "utils.py"
