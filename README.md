@@ -76,13 +76,8 @@ Ballroom) are selected and down-sampled to 500 images per class</li>
 
 Then, to pre-calulate the inception momentums of the target dataset for FID calculation:
 
-ImageNet setup:
 ```bash
-bash  prepare_data_ImageNet
-```
-CIFAR setup:
-```bash
-bash  prepare_data_ImageNet
+bash  prepare_data
 ```
 
 Note 1: The path to the main folder of the dataset should be modified in the data prepration scripts using "--data_root".
@@ -101,15 +96,10 @@ If you want to use other datasets (e.g. CIFAR10/100) as the pretraining dataset,
 ### 3.1. Launch the Training<a name="launch"></a>
 To launch the training on your target data:
 
-For ImageNet experiments:
 ```bash
-bash train_ImageNet.sh
+bash train.sh
 ```
 
-For CIFAR experiments:
-```bash
-bash train_cifar.sh
-```
 In the experimetns conducted in the paper, for the ImageNet backbone, we trained the model with the batch size of 256 using 8 V100 (16G) GPUs. For the CIFAR experiments, the model is trained with the batch size of 50  using one V100 (16G) GPU.
 
 ### 3.2. Important Training Parameters<a name="params"></a>
@@ -155,7 +145,7 @@ FID and IS are calculated during the training using the Pytorch implementation p
 
 For KMMD, the default implementation provided by [GAN Metrics](https://github.com/xuqiantong/GAN-Metrics) is used (Gaussian kernel with sigma=1).
 
-KMMD calculation is deactivated by default to avoid memory errors. To activate the KMMD calculation, use the flag "--kmmd" in the script and reduce the number of generated samples used for evaluation using "----num_inception_images" (default=50000. We were able to avoid memory errors by setting it to 25000). 
+KMMD calculation is deactivated by default to avoid memory errors. To activate the KMMD calculation, use the flag "--kmmd" in the script and reduce the number of generated samples used for evaluation using "--num_inception_images" (default=50000. We were able to avoid memory errors by setting it to 25000). 
 
 <b>Note 1</b>: Reducing the number of generated samples might make the FID calculation a bit less accurate.
 
@@ -163,15 +153,8 @@ KMMD calculation is deactivated by default to avoid memory errors. To activate t
 
 ### 4.2. Final Evaluation<a name="Final"></a>
 In addition to the evaluation during the training, you can evaluate your final model using the following commands:
-
-For ImageNet experiments:
 ```bash
-bash sample_ImageNet.sh
-```
-
-For CIFAR experiments:
-```bash
-bash sample_cifar.sh
+bash sample.sh
 ```
 Make sure to adjust the configuration in sample_ImageNet.sh / sample_cifar.sh according to your experiments.
 
