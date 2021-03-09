@@ -93,8 +93,8 @@ Some of the configuraions in  scripts "train_ImageNet.sh" and "train_cifar.sh" n
 | --stage | The stage of the training ["BN", "FT"].
 | --n_class | The number of target classes
 | --n_pretrain_class | The number of pretrained classes
-| --resume | If used, weights are loaded from the last checkpoint. Otherwise, pretrained weights are loaded.
-| --load_weights | The suffix of the checkpoint, in case of loading a specific checkpoint.
+| --resume | If used, weights are loaded from the last checkpoint. Otherwise, pretrained weights are loaded
+| --load_weights | The suffix of the checkpoint, in case of loading a specific checkpoint
 | --res_l2_scale | The degrees of l2 regularization (details in section 4.3 of the paper)
 | --comb_l1_scale | The degrees of l1 regularization (details in section 4.3 of the paper)
 
