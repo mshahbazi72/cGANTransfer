@@ -49,12 +49,6 @@ The base directory--which can be different from the code directory--will contain
 | &ensp;&ensp;&boxvr;&nbsp; logs | Contains the training logs
 | &ensp;&ensp;&boxur;&nbsp; samples | Contains the saved images during evaluation
 
-<ul>
-  <li><b>"data"</b>: Contains the training data</li>
-  <li><b>"weights"</b>: Contains the pretraining and training weights</li>
-  <li><b>"logs"</b>: Contains the training logs</li>
-  <li><b>"samples"</b>: Contains the saved images during evaluation</li>
-</ul> 
 Before training, you should create thesub-directories <b>"data"</b> and <b>"weights"</b>. Then place the data and pretraining weights inside them accordingly. the sub-directories <b>"logs"</b> and <b>"samples"</b> will be created automatically during the training.
 
 ### 2.2. Data<a name="Data"></a>
