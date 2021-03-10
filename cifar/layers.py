@@ -294,8 +294,8 @@ class ccbn(nn.Module):
     # Pretraining BN params as the prior knowledge.
     # These are initialized using the method "load_previous_knowledge" of the generator after loading the pretraining weights
     with torch.no_grad():
-      self.prev_knowledge_g = which_linear(n_pretrain_classes, output_size)
-      self.prev_knowledge_b = which_linear(n_pretrain_classes, output_size)
+      self.prev_knowledge_g = SNLinear(n_pretrain_classes, output_size)
+      self.prev_knowledge_b = SNLinear(n_pretrain_classes, output_size)
 
     # For projecting the hierarchical noise
     # initialized by the corresponding part of the pretrained model using the method "load_previous_knowledge" of the generator

@@ -133,7 +133,7 @@ class Generator(nn.Module):
         # We use a non-spectral-normed embedding here regardless;
         # For some reason applying SN to G's embedding seems to randomly cripple G
         self.which_embedding = nn.Embedding
-        bn_linear = functools.partial(self.which_linear, bias=False)
+        bn_linear = functools.partial(self.which_linear, bias=False) if G_shared else self.which_embedding
 
         # Prepare model
         # If not using shared embeddings, self.shared is just a passthrough
@@ -260,8 +260,10 @@ class Generator(nn.Module):
     # G.shared in this forward function, it would be harder to handle.
     def forward(self, z, y):
         # If hierarchical, concatenate zs and ys
-        if self.hier:
+        if self.G_shared:
             y = F.one_hot(y, num_classes=self.n_classes)
+
+        if self.hier:
             zs = torch.split(z, self.z_chunk_size, 1)
             z = zs[0]
             ys = [torch.cat([y, item], 1) for item in zs[1:]]
