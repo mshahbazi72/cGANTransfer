@@ -249,8 +249,8 @@ class Generator(nn.Module):
                         module.z_layer_g.weight.data = module.gain.weight[:, self.shared_dim:]
                         module.z_layer_b.weight.data = module.bias.weight[:, self.shared_dim:]
                     else:
-                        module.prev_knowledge_g.weight.data = module.gain.weight
-                        module.prev_knowledge_b.weight.data = module.bias.weight
+                        module.prev_knowledge_g.weight.data = module.gain.weight.t()
+                        module.prev_knowledge_b.weight.data = module.bias.weight.t()
 
 
 
