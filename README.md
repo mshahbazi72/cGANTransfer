@@ -37,7 +37,7 @@ To install the dependencies:
 pip install -r requirements.txt
 ```
 
-## 2. Prepration<a name="Prepration"></a>
+## 2. Preparation<a name="Prepration"></a>
 
 ### 2.1. Directories<a name="Directories"></a>
 The base directory--which can be different from the code directory--will contain the following sub-directories:
