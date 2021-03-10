@@ -104,7 +104,7 @@ In the experimetns conducted in the paper, for the ImageNet backbone, we trained
 ### 3.2. Important Training Parameters<a name="params"></a>
 Some of the configuraions in  scripts "train_ImageNet.sh" and "train_cifar.sh" need to be set according to your experiments. Some of the important parameters are:
 | Parameter | Description
-| :--- | :----------
+| :---- | :----------
 | --base_dir | The base directory containing your data, weights, logs, and generated samples
 | --experiment_name | The name of the experiment you are going to run (will be generated automatically if nothing is passed)
 | --batch_size | The size of the training batch
