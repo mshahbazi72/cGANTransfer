@@ -260,8 +260,8 @@ class Generator(nn.Module):
     # G.shared in this forward function, it would be harder to handle.
     def forward(self, z, y):
         # If hierarchical, concatenate zs and ys
-        if self.G_shared:
-            y = F.one_hot(y, num_classes=self.n_classes)
+
+        y = F.one_hot(y, num_classes=self.n_classes)
 
         if self.hier:
             zs = torch.split(z, self.z_chunk_size, 1)
