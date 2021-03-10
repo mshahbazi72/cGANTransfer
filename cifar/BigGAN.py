@@ -261,7 +261,7 @@ class Generator(nn.Module):
     def forward(self, z, y):
         # If hierarchical, concatenate zs and ys
 
-        y = F.one_hot(y, num_classes=self.n_classes)
+        y = F.one_hot(y, num_classes=self.n_classes).type(z.type())
 
         if self.hier:
             zs = torch.split(z, self.z_chunk_size, 1)
