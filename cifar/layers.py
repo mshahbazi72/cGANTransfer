@@ -288,20 +288,20 @@ class ccbn(nn.Module):
     self.bias = which_linear(input_size, output_size)
 
     # Similarity scores for the gain and bias
-    self.comb_layer_g = SNLinear(n_classes, n_pretrain_classes)
-    self.comb_layer_b = SNLinear(n_classes, n_pretrain_classes)
+    self.comb_layer_g = nn.Linear(n_classes, n_pretrain_classes)
+    self.comb_layer_b = nn.Linear(n_classes, n_pretrain_classes)
 
     # Pretraining BN params as the prior knowledge.
     # These are initialized using the method "load_previous_knowledge" of the generator after loading the pretraining weights
     with torch.no_grad():
-      self.prev_knowledge_g = SNLinear(n_pretrain_classes, output_size)
-      self.prev_knowledge_b = SNLinear(n_pretrain_classes, output_size)
+      self.prev_knowledge_g = nn.Linear(n_pretrain_classes, output_size)
+      self.prev_knowledge_b = nn.Linear(n_pretrain_classes, output_size)
 
     # For projecting the hierarchical noise
     # initialized by the corresponding part of the pretrained model using the method "load_previous_knowledge" of the generator
     if self.hier:
-      self.z_layer_g = SNLinear(z_chunk_size, output_size)
-      self.z_layer_b = SNLinear(z_chunk_size, output_size)
+      self.z_layer_g = nn.Linear(z_chunk_size, output_size)
+      self.z_layer_b = nn.Linear(z_chunk_size, output_size)
 
     # Residuals of the BN params for learnning extra information in addition to the knowledge propagation
     self.res_g = nn.Linear(n_classes, output_size, bias=False)
