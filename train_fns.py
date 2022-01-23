@@ -62,7 +62,7 @@ def GAN_training_function(G, D, GD, z_, y_, ema, state_dict, config):
       utils.toggle_grad(D, False)
       if stage == 'BN':
           # Only unfreeze parameters necessary for learning target classes' BN parameters
-          utils.toggle_grad(G, True, include=['comb_layer', 'res_g', 'res_b', 'prev_knowledge', 'comb_att', 'z_layer'])
+          utils.toggle_grad(G, True, include=['comb_layer', 'res_g', 'res_b', 'prev_knowledge', 'z_layer'])
       elif stage == 'FT':
           # Fine-tune the generator, while freezing .
           # The similarity scores and base BN parameters (prior knowledge) are freezed.
